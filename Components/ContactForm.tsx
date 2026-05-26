@@ -45,11 +45,11 @@ export default function ContactForm() {
             <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-6">
               Get In Touch
             </p>
-            <h2 className="text-5xl lg:text-6xl font-black leading-tight text-[#2E2A26] dark:text-[#F2EDE6] mb-8">
+            <h2 className="text-5xl lg:text-6xl font-black leading-tight text-[#2E2A26] mb-8">
               Let's Build Something{' '}
               <span className="gradient-text">Great Together.</span>
             </h2>
-            <p className="text-[#8C857C] dark:text-[#9BAAB8] text-lg leading-relaxed mb-12">
+            <p className="text-[#8C857C] text-lg leading-relaxed mb-12">
               Ready to elevate your brand? Fill in the form and we'll get back to you
               within 24 hours with a tailored plan for your project.
             </p>
@@ -74,7 +74,7 @@ export default function ContactForm() {
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">{icon}</svg>
                   </div>
                   <div>
-                    <p className="font-semibold text-sm text-[#2E2A26] dark:text-[#F2EDE6]">{label}</p>
+                    <p className="font-semibold text-sm text-[#2E2A26]">{label}</p>
                     {href ? (
                       <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="text-[#8C857C] text-sm hover:text-[#B5552A] transition-colors">{value}</a>
                     ) : (
@@ -103,8 +103,8 @@ export default function ContactForm() {
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
                 </div>
-                <h3 className="text-2xl font-black text-[#2E2A26] dark:text-[#F2EDE6] mb-3">Opening WhatsApp!</h3>
-                <p className="text-[#8C857C] dark:text-[#9BAAB8]">Your message has been prepared. Complete it on WhatsApp — we reply within 24 hours.</p>
+                <h3 className="text-2xl font-black text-[#2E2A26] mb-3">Opening WhatsApp!</h3>
+                <p className="text-[#8C857C]">Your message has been prepared. Complete it on WhatsApp — we reply within 24 hours.</p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="glass rounded-3xl p-8 space-y-5">
@@ -112,12 +112,12 @@ export default function ContactForm() {
                   <div>
                     <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Full Name *</label>
                     <input type="text" name="name" required placeholder="John Smith"
-                      className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 dark:border-white/10 bg-[#D6CFC4]/30 dark:bg-white/5 text-[#2E2A26] dark:text-[#F2EDE6] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#B5552A] focus:ring-2 focus:ring-[#B5552A]/10 transition-all" />
+                      className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 bg-[#D6CFC4]/30 text-[#2E2A26] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#B5552A] focus:ring-2 focus:ring-[#B5552A]/10 transition-all" />
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Email *</label>
                     <input type="email" name="email" required placeholder="you@company.com"
-                      className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 dark:border-white/10 bg-[#D6CFC4]/30 dark:bg-white/5 text-[#2E2A26] dark:text-[#F2EDE6] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#B5552A] focus:ring-2 focus:ring-[#B5552A]/10 transition-all" />
+                      className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 bg-[#D6CFC4]/30 text-[#2E2A26] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#B5552A] focus:ring-2 focus:ring-[#B5552A]/10 transition-all" />
                   </div>
                 </div>
 
@@ -130,7 +130,7 @@ export default function ContactForm() {
                 <div>
                   <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Service Needed</label>
                   <div className="relative">
-                    <select name="service" className="w-full px-4 py-3 pr-10 rounded-xl border border-[#8C857C]/25 bg-[#F2EDE6] dark:bg-[#1A1714] text-[#2E2A26] dark:text-[#F2EDE6] text-sm focus:outline-none focus:border-[#B5552A] focus:ring-2 focus:ring-[#B5552A]/10 transition-all appearance-none cursor-pointer">
+                    <select name="service" className="w-full px-4 py-3 pr-10 rounded-xl border border-[#8C857C]/25 bg-[#F2EDE6] text-[#2E2A26] text-sm focus:outline-none focus:border-[#B5552A] focus:ring-2 focus:ring-[#B5552A]/10 transition-all appearance-none cursor-pointer">
                       <option value="" disabled>Select a service...</option>
                       {services.map((s) => <option key={s} value={s}>{s}</option>)}
                     </select>
@@ -145,7 +145,7 @@ export default function ContactForm() {
                 <div>
                   <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Tell Us About Your Project *</label>
                   <textarea name="message" required rows={4} placeholder="Describe your project, goals, and timeline..."
-                    className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 dark:border-white/10 bg-[#D6CFC4]/30 dark:bg-white/5 text-[#2E2A26] dark:text-[#F2EDE6] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#B5552A] focus:ring-2 focus:ring-[#B5552A]/10 transition-all resize-none" />
+                    className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 bg-[#D6CFC4]/30 text-[#2E2A26] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#B5552A] focus:ring-2 focus:ring-[#B5552A]/10 transition-all resize-none" />
                 </div>
 
                 <motion.button

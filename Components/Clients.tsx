@@ -70,7 +70,7 @@ export default function Clients() {
           <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-3">
             Trusted By
           </p>
-          <h2 className="text-4xl lg:text-5xl font-black text-[#2E2A26] dark:text-[#F2EDE6]">
+          <h2 className="text-4xl lg:text-5xl font-black text-[#2E2A26]">
             Brands We've <span className="text-[#B5552A]">Worked With</span>
           </h2>
         </motion.div>

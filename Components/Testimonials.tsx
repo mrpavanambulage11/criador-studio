@@ -82,7 +82,7 @@ export default function Testimonials() {
           <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-5">
             Social Proof
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26] dark:text-[#F2EDE6]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26]">
             Don't Take <span className="text-[#B5552A]">Our Word</span> For It
           </h2>
         </motion.div>
@@ -115,7 +115,7 @@ export default function Testimonials() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -16 }}
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-                className="text-xl lg:text-2xl text-[#2E2A26] dark:text-[#F2EDE6] leading-relaxed mb-10 max-w-4xl mx-auto text-center font-medium"
+                className="text-xl lg:text-2xl text-[#2E2A26] leading-relaxed mb-10 max-w-4xl mx-auto text-center font-medium"
               >
                 &ldquo;{r.quote}&rdquo;
               </motion.p>
@@ -134,8 +134,8 @@ export default function Testimonials() {
                   {r.initials}
                 </div>
                 <div className="text-left">
-                  <p className="font-bold text-[#2E2A26] dark:text-[#F2EDE6] text-sm">{r.name}</p>
-                  <p className="text-[#8C857C] dark:text-[#9BAAB8] text-xs">{r.role}</p>
+                  <p className="font-bold text-[#2E2A26] text-sm">{r.name}</p>
+                  <p className="text-[#8C857C] text-xs">{r.role}</p>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -181,14 +181,14 @@ export default function Testimonials() {
                   <span key={s} className="text-[#B5552A] text-xs">★</span>
                 ))}
               </div>
-              <p className="text-[#2E2A26] dark:text-[#F2EDE6] text-sm leading-relaxed line-clamp-3 mb-4">&ldquo;{rev.quote}&rdquo;</p>
+              <p className="text-[#2E2A26] text-sm leading-relaxed line-clamp-3 mb-4">&ldquo;{rev.quote}&rdquo;</p>
               <div className="flex items-center gap-2">
                 <div className={`w-7 h-7 rounded-full bg-gradient-to-br ${rev.gradient} flex items-center justify-center text-white text-[10px] font-bold shrink-0`}>
                   {rev.initials}
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-[#2E2A26] dark:text-[#F2EDE6]">{rev.name}</p>
-                  <p className="text-[10px] text-[#8C857C] dark:text-[#9BAAB8]">{rev.role}</p>
+                  <p className="text-xs font-semibold text-[#2E2A26]">{rev.name}</p>
+                  <p className="text-[10px] text-[#8C857C]">{rev.role}</p>
                 </div>
               </div>
             </motion.div>
