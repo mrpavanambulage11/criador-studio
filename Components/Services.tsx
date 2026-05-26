@@ -1,0 +1,276 @@
+'use client'
+import { motion, useMotionValue, useTransform, useSpring, useMotionTemplate, type Variants } from 'framer-motion'
+import { useRef, useState } from 'react'
+import TextReveal from './TextReveal'
+import { bp } from '@/lib/bp'
+
+function TiltCard({ children, className }: { children: React.ReactNode; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const x = useMotionValue(0)
+  const y = useMotionValue(0)
+  const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [8, -8]), { stiffness: 300, damping: 30 })
+  const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-8, 8]), { stiffness: 300, damping: 30 })
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = ref.current
+    if (!el) return
+    const rect = el.getBoundingClientRect()
+    x.set((e.clientX - rect.left) / rect.width - 0.5)
+    y.set((e.clientY - rect.top) / rect.height - 0.5)
+  }
+
+  const handleMouseLeave = () => {
+    x.set(0)
+    y.set(0)
+  }
+
+  return (
+    <motion.div
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{ rotateX, rotateY, transformStyle: 'preserve-3d', perspective: 800 }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+const services = [
+  {
+    title: 'Branding',
+    desc: 'Logo systems, visual identities, and brand guidelines built to make your business unforgettable.',
+    gradient: 'from-[#B5552A] to-[#8B3A1C]',
+    image: bp('/services/branding.jpg.png'),
+    iconBg: 'bg-white/15',
+    icon: (
+      <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2l9.5 5.5v11L12 24l-9.5-5.5v-11z"/>
+        <path d="M12 2v22M2.5 7.5l19 11M21.5 7.5l-19 11"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Catalog Designs',
+    desc: 'Professionally designed product and service catalogs that showcase your offerings with impact.',
+    gradient: 'from-[#2E4057] to-[#1a2a3a]',
+    image: bp('/services/Catalog.jpg.png'),
+    iconBg: 'bg-white/15',
+    icon: (
+      <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        <line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Visiting Cards',
+    desc: 'Premium business card designs that leave a lasting impression at every handshake.',
+    gradient: 'from-[#3D2B1F] to-[#5C3D2E]',
+    image: bp('/services/cards.jpg'),
+    iconBg: 'bg-white/15',
+    icon: (
+      <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="6" width="20" height="12" rx="2"/>
+        <circle cx="8" cy="12" r="2"/>
+        <line x1="13" y1="10" x2="19" y2="10"/>
+        <line x1="13" y1="14" x2="17" y2="14"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Label Designing',
+    desc: 'Eye-catching product labels and stickers crafted to stand out on shelves and online.',
+    gradient: 'from-[#7B4F12] to-[#A0671A]',
+    image: bp('/services/label.jpg'),
+    iconBg: 'bg-white/15',
+    icon: (
+      <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+        <circle cx="7" cy="7" r="1.5" fill="white" stroke="none"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Social Media Marketing',
+    desc: 'High-converting creatives, content strategies, and ad campaigns for every platform.',
+    gradient: 'from-[#1D3461] to-[#2952A3]',
+    image: bp('/services/social.jpg'),
+    iconBg: 'bg-white/15',
+    icon: (
+      <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Search Engine Optimization',
+    desc: 'Data-driven SEO strategies that improve your rankings and drive organic traffic.',
+    gradient: 'from-[#1A4731] to-[#256B47]',
+    image: bp('/services/seo.jpg'),
+    iconBg: 'bg-white/15',
+    icon: (
+      <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        <polyline points="8 11 10 13 14 9"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Web Hosting',
+    desc: 'Fast, secure, and reliable hosting solutions to keep your website always online.',
+    gradient: 'from-[#1C3A5E] to-[#2A5298]',
+    image: bp('/services/web.jpg'),
+    iconBg: 'bg-white/15',
+    icon: (
+      <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="3" width="20" height="7" rx="2"/>
+        <rect x="2" y="14" width="20" height="7" rx="2"/>
+        <line x1="6" y1="6.5" x2="6.01" y2="6.5" strokeWidth="2.5"/>
+        <line x1="6" y1="17.5" x2="6.01" y2="17.5" strokeWidth="2.5"/>
+        <line x1="10" y1="6.5" x2="16" y2="6.5"/>
+        <line x1="10" y1="17.5" x2="16" y2="17.5"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'E-Commerce',
+    desc: 'End-to-end online store design and development built to convert visitors into customers.',
+    gradient: 'from-[#4A1942] to-[#7B2D73]',
+    image: bp('/services/ecom.jpg'),
+    iconBg: 'bg-white/15',
+    icon: (
+      <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 0 1-8 0"/>
+      </svg>
+    ),
+  },
+]
+
+const container: Variants = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.08 } },
+}
+
+const item: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0 },
+}
+
+export default function Services() {
+  const gridRef = useRef<HTMLDivElement>(null)
+  const mouseX = useMotionValue(-1000)
+  const mouseY = useMotionValue(-1000)
+  const [isInGrid, setIsInGrid] = useState(false)
+  const spotlight = useMotionTemplate`radial-gradient(400px circle at ${mouseX}px ${mouseY}px, rgba(181,85,42,0.12), transparent 70%)`
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = gridRef.current?.getBoundingClientRect()
+    if (!rect) return
+    mouseX.set(e.clientX - rect.left)
+    mouseY.set(e.clientY - rect.top)
+  }
+
+  return (
+    <section id="services" className="py-12 md:py-16 px-4 md:px-6">
+      <div className="max-w-7xl mx-auto">
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.7 }}
+          className="mb-12"
+        >
+          <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-5">What We Do</p>
+          <div className="flex items-end justify-between flex-wrap gap-8">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26]">
+              <TextReveal text="Our" />{' '}<span className="text-[#B5552A]"><TextReveal text="Services" delay={0.1} /></span>
+            </h2>
+            <p className="text-[#8C857C] max-w-[260px] text-base leading-relaxed border-l-2 border-[#B5552A]/30 pl-4">
+              End-to-end creative services for brands that want to make an impact.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Spotlight wrapper */}
+        <div
+          ref={gridRef}
+          className="relative"
+          onMouseMove={handleMouseMove}
+          onMouseEnter={() => setIsInGrid(true)}
+          onMouseLeave={() => { setIsInGrid(false); mouseX.set(-1000); mouseY.set(-1000) }}
+        >
+          {/* Cursor spotlight */}
+          <motion.div
+            className="pointer-events-none absolute inset-0 z-10 rounded-3xl"
+            style={{ background: spotlight, opacity: isInGrid ? 1 : 0, transition: 'opacity 0.3s' }}
+          />
+
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: '-80px' }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+        >
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              variants={item}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              className="h-full"
+            >
+            <TiltCard className="group rounded-2xl overflow-hidden cursor-pointer border border-[#8C857C]/15 hover:border-[#B5552A]/30 hover:shadow-xl transition-all duration-300 h-full">
+              {/* Visual header */}
+              <div className={`relative overflow-hidden h-40 ${!service.image ? `bg-gradient-to-br ${service.gradient}` : ''}`}>
+                {index === 0 && (
+                  <div className="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#B5552A] text-white tracking-wide shadow-md">
+                    ★ Most Popular
+                  </div>
+                )}
+                {service.image ? (
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover" loading="lazy" />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 opacity-10">
+                      <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-white/20" />
+                      <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-white/10" />
+                    </div>
+                    <div className="h-full flex items-center justify-center">
+                      <div className={`${service.iconBg} rounded-2xl p-4`}>
+                        {service.icon}
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
+
+              {/* Content */}
+              <div className="glass p-6 h-full">
+                <h3 className="text-base font-bold mb-2 text-[#2E2A26]">{service.title}</h3>
+                <p className="text-[#8C857C] leading-relaxed text-sm">{service.desc}</p>
+                <a href="#contact" className="mt-4 text-[#B5552A] text-sm font-medium flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Learn more
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </TiltCard>
+            </motion.div>
+          ))}
+        </motion.div>
+        </div>{/* end spotlight wrapper */}
+
+      </div>
+    </section>
+  )
+}
