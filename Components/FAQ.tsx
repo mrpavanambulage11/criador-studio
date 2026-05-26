@@ -46,7 +46,7 @@ export default function FAQ() {
           <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-4">
             Common Questions
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26] mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26] dark:text-[#F2EDE6] mb-4">
             Everything You Want to <span className="text-[#B5552A]">Know</span>
           </h2>
           <p className="text-[#8C857C] text-base max-w-md mx-auto">
@@ -72,7 +72,7 @@ export default function FAQ() {
                   <span className={`text-xs font-black mt-0.5 shrink-0 transition-colors duration-200 ${open === i ? 'text-[#B5552A]' : 'text-[#8C857C]/40'}`}>
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <span className="font-semibold text-[#2E2A26] text-base">{faq.q}</span>
+                  <span className="font-semibold text-[#2E2A26] dark:text-[#F2EDE6] text-base">{faq.q}</span>
                 </span>
                 <span
                   className={`shrink-0 w-7 h-7 rounded-full border border-[#8C857C]/30 flex items-center justify-center text-[#8C857C] transition-all duration-300 ${
@@ -95,7 +95,7 @@ export default function FAQ() {
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
-                    <p className="px-8 pb-7 text-[#8C857C] leading-relaxed text-sm">
+                    <p className="px-8 pb-7 text-[#8C857C] dark:text-[#9BAAB8] leading-relaxed text-sm">
                       {faq.a}
                     </p>
                   </motion.div>

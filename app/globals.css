@@ -1,11 +1,18 @@
 @import "tailwindcss";
 
+/* Class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 *, *::before, *::after {
@@ -24,38 +31,37 @@ body {
   color: #2E2A26;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  /* iOS safe area support */
   padding-bottom: env(safe-area-inset-bottom);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Tap highlight removal on mobile */
+html.dark body {
+  background: #0F0D0B;
+  color: #F2EDE6;
+}
+
 a, button {
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
 
-/* GPU layer hints for fixed composited elements */
 .fixed {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
 
-/* Animated elements — prevent layout recalc */
 [data-framer-motion], [style*="transform"] {
   will-change: transform;
 }
 
-/* Better heading wrapping */
 h1, h2, h3 {
   text-wrap: balance;
 }
 
-/* Smooth image rendering */
 img {
   image-rendering: auto;
 }
 
-/* Prevent tap delay on mobile */
 * {
   -webkit-touch-callout: none;
 }
@@ -72,6 +78,17 @@ img {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(140, 133, 124, 0.2);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+html.dark .glass {
+  background: rgba(26, 23, 20, 0.75);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Client logos — white silhouettes in dark mode */
+html.dark .client-logo {
+  filter: brightness(0) invert(1) opacity(0.55);
 }
 
 /* Marquee (clients) */

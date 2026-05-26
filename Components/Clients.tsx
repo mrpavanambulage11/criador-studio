@@ -47,7 +47,7 @@ function MarqueeRow({ items, reverse = false }: { items: typeof row1; reverse?: 
             <img
               src={bp(`/clients/${client.file}`)}
               alt={client.name}
-              className="max-h-12 max-w-full object-contain mix-blend-multiply"
+              className="max-h-12 max-w-full object-contain mix-blend-multiply client-logo"
             />
           </div>
         ))}
@@ -70,7 +70,7 @@ export default function Clients() {
           <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-3">
             Trusted By
           </p>
-          <h2 className="text-4xl lg:text-5xl font-black text-[#2E2A26]">
+          <h2 className="text-4xl lg:text-5xl font-black text-[#2E2A26] dark:text-[#F2EDE6]">
             Brands We've <span className="text-[#B5552A]">Worked With</span>
           </h2>
         </motion.div>

@@ -73,10 +73,10 @@ export default function Process() {
         >
           <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-5">How We Work</p>
           <div className="flex items-end justify-between flex-wrap gap-6">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26] dark:text-[#F2EDE6]">
               Our Creative <span className="text-[#B5552A]">Process</span>
             </h2>
-            <p className="text-[#8C857C] max-w-xs text-sm leading-relaxed border-l-2 border-[#B5552A]/30 pl-4">
+            <p className="text-[#8C857C] dark:text-[#9BAAB8] max-w-xs text-sm leading-relaxed border-l-2 border-[#B5552A]/30 pl-4">
               A proven 5-step system that turns ideas into brands people remember.
             </p>
           </div>
@@ -115,8 +115,8 @@ export default function Process() {
                     <span className="text-xs font-black text-[#B5552A]/50">{step.num}</span>
                   </div>
 
-                  <h3 className="text-base font-black mb-3 text-[#2E2A26] tracking-tight">{step.title}</h3>
-                  <p className="text-[#8C857C] text-xs leading-relaxed">{step.desc}</p>
+                  <h3 className="text-base font-black mb-3 text-[#2E2A26] dark:text-[#F2EDE6] tracking-tight">{step.title}</h3>
+                  <p className="text-[#8C857C] dark:text-[#9BAAB8] text-xs leading-relaxed">{step.desc}</p>
                 </div>
 
                 {/* Arrow */}
@@ -140,7 +140,7 @@ export default function Process() {
         >
           <div className="flex items-center gap-4">
             <span className="text-2xl">⏱️</span>
-            <p className="text-[#2E2A26] font-semibold">Average turnaround: <span className="text-[#B5552A]">7–14 days</span> from brief to delivery</p>
+            <p className="text-[#2E2A26] dark:text-[#F2EDE6] font-semibold">Average turnaround: <span className="text-[#B5552A]">7–14 days</span> from brief to delivery</p>
           </div>
           <a href="#contact" className="inline-block px-7 py-3.5 bg-[#B5552A] text-white rounded-full text-sm font-semibold hover:bg-[#9E4822] transition-all duration-200 hover:scale-105 active:scale-95 whitespace-nowrap shadow-lg shadow-[#B5552A]/20">
             Start Your Project →

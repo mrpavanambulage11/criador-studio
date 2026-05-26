@@ -191,10 +191,10 @@ export default function Services() {
         >
           <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-5">What We Do</p>
           <div className="flex items-end justify-between flex-wrap gap-8">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26] dark:text-[#F2EDE6]">
               <TextReveal text="Our" />{' '}<span className="text-[#B5552A]"><TextReveal text="Services" delay={0.1} /></span>
             </h2>
-            <p className="text-[#8C857C] max-w-[260px] text-base leading-relaxed border-l-2 border-[#B5552A]/30 pl-4">
+            <p className="text-[#8C857C] dark:text-[#9BAAB8] max-w-[260px] text-base leading-relaxed border-l-2 border-[#B5552A]/30 pl-4">
               End-to-end creative services for brands that want to make an impact.
             </p>
           </div>
@@ -255,8 +255,8 @@ export default function Services() {
 
               {/* Content */}
               <div className="glass p-6 h-full">
-                <h3 className="text-base font-bold mb-2 text-[#2E2A26]">{service.title}</h3>
-                <p className="text-[#8C857C] leading-relaxed text-sm">{service.desc}</p>
+                <h3 className="text-base font-bold mb-2 text-[#2E2A26] dark:text-[#F2EDE6]">{service.title}</h3>
+                <p className="text-[#8C857C] dark:text-[#9BAAB8] leading-relaxed text-sm">{service.desc}</p>
                 <a href="#contact" className="mt-4 text-[#B5552A] text-sm font-medium flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   Learn more
                   <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

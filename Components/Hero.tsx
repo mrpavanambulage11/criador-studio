@@ -105,7 +105,7 @@ export default function Hero() {
             <p className="uppercase tracking-[3px] text-[#B5552A] text-[11px] font-semibold">Premium Creative Agency</p>
           </motion.div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight text-[#2E2A26] relative">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight text-[#2E2A26] dark:text-[#F2EDE6] relative">
             <TextReveal text="We Don't Just" delay={0.1} />
             <span style={{ display: 'block' }}>
               <TextReveal text="Design Brands" delay={0.25} wordClassName="gradient-text" />
@@ -136,7 +136,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24, filter: 'blur(6px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 0.8, delay: 0.75 }}
-            className="mt-6 md:mt-8 text-[#8C857C] text-base md:text-lg leading-relaxed max-w-md"
+            className="mt-6 md:mt-8 text-[#8C857C] dark:text-[#9BAAB8] text-base md:text-lg leading-relaxed max-w-md"
           >
             Creative branding, social media, packaging, UI/UX, and digital experiences crafted for modern businesses.
           </motion.p>
@@ -172,8 +172,8 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.2 + i * 0.1 }}
               >
-                <p className="text-2xl md:text-3xl font-black text-[#2E2A26]"><CountUp to={to} suffix={suffix} /></p>
-                <p className="text-[#8C857C] text-xs md:text-sm mt-1">{label}</p>
+                <p className="text-2xl md:text-3xl font-black text-[#2E2A26] dark:text-[#F2EDE6]"><CountUp to={to} suffix={suffix} /></p>
+                <p className="text-[#8C857C] dark:text-[#9BAAB8] text-xs md:text-sm mt-1">{label}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -256,7 +256,7 @@ export default function Hero() {
                 animate={{ scale: [1, 1.4, 1], opacity: [1, 0.5, 1] }}
                 transition={{ duration: 1.6, repeat: Infinity }}
               />
-              <p className="text-sm font-semibold text-[#2E2A26]">Available for Projects</p>
+              <p className="text-sm font-semibold text-[#2E2A26] dark:text-[#F2EDE6]">Available for Projects</p>
             </div>
           </FloatingCard>
         </motion.div>

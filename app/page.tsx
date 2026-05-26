@@ -19,7 +19,7 @@ import ScrollProgress from '@/Components/ScrollProgress'
 
 export default function Home() {
   return (
-    <main className="bg-[#F2EDE6] text-[#2E2A26] overflow-hidden cursor-none">
+    <main className="bg-[#F2EDE6] dark:bg-[#0F0D0B] text-[#2E2A26] dark:text-[#F2EDE6] overflow-hidden cursor-none">
       <ScrollProgress />
       <Preloader />
       <CustomCursor />

@@ -70,11 +70,11 @@ export default function About() {
         >
           <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-5">About Criador</p>
           <div className="flex items-end justify-between flex-wrap gap-6">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-[#2E2A26]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-[#2E2A26] dark:text-[#F2EDE6]">
               We Create Brands<br />That People{' '}
               <span className="text-[#B5552A]">Remember.</span>
             </h2>
-            <p className="text-[#8C857C] max-w-sm leading-relaxed border-l-2 border-[#B5552A]/30 pl-4">
+            <p className="text-[#8C857C] dark:text-[#9BAAB8] max-w-sm leading-relaxed border-l-2 border-[#B5552A]/30 pl-4">
               A premium creative studio combining strategy, design, and execution for modern brands.
             </p>
           </div>
@@ -89,7 +89,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.7 }}
-              className="text-[#2E2A26] text-lg md:text-xl leading-relaxed mb-12"
+              className="text-[#2E2A26] dark:text-[#F2EDE6] text-lg md:text-xl leading-relaxed mb-12"
             >
               Criador is a premium creative studio focused on modern branding, UI/UX design,
               marketing visuals, and digital experiences that drive real results for
@@ -110,7 +110,7 @@ export default function About() {
                     {v.icon}
                   </div>
                   <div>
-                    <p className="font-bold text-[#2E2A26] mb-1">{v.title}</p>
+                    <p className="font-bold text-[#2E2A26] dark:text-[#F2EDE6] mb-1">{v.title}</p>
                     <p className="text-[#8C857C] text-sm">{v.desc}</p>
                   </div>
                 </motion.div>
@@ -130,10 +130,10 @@ export default function About() {
                   transition={{ delay: i * 0.1, duration: 0.5 }}
                   className="glass rounded-2xl p-6 text-center border border-transparent hover:border-[#B5552A]/15 transition-colors duration-300"
                 >
-                  <h3 className="text-4xl font-black text-[#2E2A26]">
+                  <h3 className="text-4xl font-black text-[#2E2A26] dark:text-[#F2EDE6]">
                     <CountUp to={s.to} suffix={s.suffix} />
                   </h3>
-                  <p className="text-[#8C857C] mt-2 text-sm">{s.label}</p>
+                  <p className="text-[#8C857C] dark:text-[#9BAAB8] mt-2 text-sm">{s.label}</p>
                 </motion.div>
               ))}
             </div>
@@ -154,7 +154,7 @@ export default function About() {
                   Available for Projects
                 </span>
               </div>
-              <p className="text-[#8C857C] text-sm leading-relaxed">
+              <p className="text-[#8C857C] dark:text-[#9BAAB8] text-sm leading-relaxed">
                 We combine strategic thinking with bold design — from the first logo sketch to a fully deployed digital experience. Every project built with intention and craft.
               </p>
             </motion.div>
