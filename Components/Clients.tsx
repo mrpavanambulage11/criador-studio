@@ -2,7 +2,8 @@
 import { motion } from 'framer-motion'
 import { bp } from '@/lib/bp'
 
-const row1 = [
+
+const allClients = [
   { name: 'Zinox Kitchen', file: 'zinox.png' },
   { name: 'Yesladder', file: 'yesladder.png' },
   { name: 'Celebrating Us', file: 'celebrating-us.png' },
@@ -16,9 +17,6 @@ const row1 = [
   { name: 'CircuitLay', file: 'circuitlay.png' },
   { name: 'The Shepherd', file: 'the-shepherd.png' },
   { name: 'CPBL', file: 'cpbl.png' },
-]
-
-const row2 = [
   { name: 'Dannys Grannys', file: 'dannys-grannys.png' },
   { name: 'Learnford Academy', file: 'learnford.png' },
   { name: 'Verifyer', file: 'verifyer.png' },
@@ -34,28 +32,6 @@ const row2 = [
   { name: 'B4BUS', file: 'b4bus.png' },
 ]
 
-function MarqueeRow({ items, reverse = false }: { items: typeof row1; reverse?: boolean }) {
-  const doubled = [...items, ...items]
-  return (
-    <div className="marquee-wrap overflow-hidden">
-      <div className={`flex w-max gap-4 ${reverse ? 'marquee-reverse' : 'marquee'}`}>
-        {doubled.map((client, i) => (
-          <div
-            key={i}
-            className="flex items-center justify-center w-36 h-20 rounded-2xl glass border border-transparent hover:border-[#B5552A]/25 transition-colors duration-200 px-4 shrink-0"
-          >
-            <img
-              src={bp(`/clients/${client.file}`)}
-              alt={client.name}
-              className="max-h-12 max-w-full object-contain mix-blend-multiply client-logo"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
 export default function Clients() {
   return (
     <section className="py-12 overflow-hidden">
@@ -67,21 +43,35 @@ export default function Clients() {
           transition={{ duration: 0.6 }}
           className="text-center mb-8"
         >
-          <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-3">
+          <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-3">
             Trusted By
           </p>
           <h2 className="text-4xl lg:text-5xl font-black text-[#2E2A26]">
-            Brands We've <span className="text-[#B5552A]">Worked With</span>
+            Brands We've <span className="text-[#8B31C7]">Worked With</span>
           </h2>
         </motion.div>
       </div>
 
-      <div className="space-y-4 relative">
+      <div className="relative">
         <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#F2EDE6] to-transparent z-10" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#F2EDE6] to-transparent z-10" />
 
-        <MarqueeRow items={row1} />
-        <MarqueeRow items={row2} reverse />
+        <div className="marquee-wrap overflow-hidden">
+          <div className="flex w-max gap-4 marquee">
+            {[...allClients, ...allClients].map((client, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-center w-36 h-20 rounded-2xl glass border border-transparent hover:border-[#8B31C7]/25 transition-colors duration-200 px-4 shrink-0"
+              >
+                <img
+                  src={bp(`/clients/${client.file}`)}
+                  alt={client.name}
+                  className="max-h-12 max-w-full object-contain mix-blend-multiply client-logo"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

@@ -7,7 +7,7 @@ const steps = [
     title: 'Discovery',
     desc: 'Deep dive into your brand, goals, and target audience to understand what makes you different.',
     icon: (
-      <svg className="w-6 h-6 text-[#B5552A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg className="w-6 h-6 text-[#8B31C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
       </svg>
     ),
@@ -17,7 +17,7 @@ const steps = [
     title: 'Research',
     desc: 'Competitive analysis and market positioning to find your unique space in the market.',
     icon: (
-      <svg className="w-6 h-6 text-[#B5552A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg className="w-6 h-6 text-[#8B31C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
         <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
       </svg>
@@ -28,7 +28,7 @@ const steps = [
     title: 'Strategy',
     desc: 'Creative direction, messaging framework, and a design blueprint tailored to your audience.',
     icon: (
-      <svg className="w-6 h-6 text-[#B5552A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg className="w-6 h-6 text-[#8B31C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/>
         <line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/>
         <line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/>
@@ -40,7 +40,7 @@ const steps = [
     title: 'Design',
     desc: 'Crafting every visual asset with precision — from logos to full digital systems.',
     icon: (
-      <svg className="w-6 h-6 text-[#B5552A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg className="w-6 h-6 text-[#8B31C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
       </svg>
     ),
@@ -50,7 +50,7 @@ const steps = [
     title: 'Launch',
     desc: 'Delivery, implementation, and ongoing brand support so you hit the ground running.',
     icon: (
-      <svg className="w-6 h-6 text-[#B5552A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg className="w-6 h-6 text-[#8B31C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
         <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
         <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
@@ -71,12 +71,12 @@ export default function Process() {
           transition={{ duration: 0.7 }}
           className="mb-16 md:mb-24"
         >
-          <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-5">How We Work</p>
+          <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-5">How We Work</p>
           <div className="flex items-end justify-between flex-wrap gap-6">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26]">
-              Our Creative <span className="text-[#B5552A]">Process</span>
+              Our Creative <span className="text-[#8B31C7]">Process</span>
             </h2>
-            <p className="text-[#8C857C] max-w-xs text-sm leading-relaxed border-l-2 border-[#B5552A]/30 pl-4">
+            <p className="text-[#8C857C] max-w-xs text-sm leading-relaxed border-l-2 border-[#8B31C7]/30 pl-4">
               A proven 5-step system that turns ideas into brands people remember.
             </p>
           </div>
@@ -87,7 +87,7 @@ export default function Process() {
           {/* Connecting line */}
           <div className="hidden lg:block absolute top-8 left-[9%] right-[9%] h-px">
             <motion.div
-              className="h-full bg-gradient-to-r from-transparent via-[#B5552A]/25 to-transparent"
+              className="h-full bg-gradient-to-r from-transparent via-[#8B31C7]/25 to-transparent"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
@@ -105,14 +105,14 @@ export default function Process() {
                 transition={{ delay: i * 0.1, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
                 className="group relative"
               >
-                <div className="glass rounded-3xl p-6 text-center h-full hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 border border-transparent hover:border-[#B5552A]/20">
+                <div className="glass rounded-3xl p-6 text-center h-full hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 border border-transparent hover:border-[#8B31C7]/20">
 
                   {/* Number + icon */}
                   <div className="relative inline-flex flex-col items-center mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-[#B5552A]/10 border border-[#B5552A]/20 flex items-center justify-center mb-2">
+                    <div className="w-12 h-12 rounded-2xl bg-[#8B31C7]/10 border border-[#8B31C7]/20 flex items-center justify-center mb-2">
                       {step.icon}
                     </div>
-                    <span className="text-xs font-black text-[#B5552A]/50">{step.num}</span>
+                    <span className="text-xs font-black text-[#8B31C7]/50">{step.num}</span>
                   </div>
 
                   <h3 className="text-base font-black mb-3 text-[#2E2A26] tracking-tight">{step.title}</h3>
@@ -121,7 +121,7 @@ export default function Process() {
 
                 {/* Arrow */}
                 {i < steps.length - 1 && (
-                  <div className="hidden lg:flex absolute -right-3 top-8 z-10 w-6 h-6 items-center justify-center text-[#B5552A]/30 text-lg">
+                  <div className="hidden lg:flex absolute -right-3 top-8 z-10 w-6 h-6 items-center justify-center text-[#8B31C7]/30 text-lg">
                     ›
                   </div>
                 )}
@@ -136,13 +136,13 @@ export default function Process() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="mt-12 md:mt-16 glass rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4 border border-[#B5552A]/10"
+          className="mt-12 md:mt-16 glass rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4 border border-[#8B31C7]/10"
         >
           <div className="flex items-center gap-4">
             <span className="text-2xl">⏱️</span>
-            <p className="text-[#2E2A26] font-semibold">Average turnaround: <span className="text-[#B5552A]">7–14 days</span> from brief to delivery</p>
+            <p className="text-[#2E2A26] font-semibold">Average turnaround: <span className="text-[#8B31C7]">7–14 days</span> from brief to delivery</p>
           </div>
-          <a href="#contact" className="inline-block px-7 py-3.5 bg-[#B5552A] text-white rounded-full text-sm font-semibold hover:bg-[#9E4822] transition-all duration-200 hover:scale-105 active:scale-95 whitespace-nowrap shadow-lg shadow-[#B5552A]/20">
+          <a href="#contact" className="inline-block px-7 py-3.5 bg-[#8B31C7] text-white rounded-full text-sm font-semibold hover:bg-[#7A28B0] transition-all duration-200 hover:scale-105 active:scale-95 whitespace-nowrap shadow-lg shadow-[#8B31C7]/20">
             Start Your Project →
           </a>
         </motion.div>

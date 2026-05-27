@@ -33,8 +33,8 @@ export default function Footer() {
     <footer className="bg-[#1E1B18] pt-16 md:pt-24 pb-10 px-4 md:px-6 relative overflow-hidden">
 
       {/* Background texture orbs */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-[#B5552A]/6 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-[#B5552A]/4 blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-[#8B31C7]/6 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-[#8B31C7]/4 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative">
 
@@ -46,20 +46,20 @@ export default function Footer() {
           transition={{ duration: 0.7 }}
           className="mb-12 md:mb-20 pb-10 md:pb-16 border-b border-white/8"
         >
-          <p className="uppercase tracking-[4px] text-[#B5552A] text-xs font-semibold mb-5">Let's Connect</p>
+          <p className="uppercase tracking-[4px] text-[#8B31C7] text-xs font-semibold mb-5">Let's Connect</p>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <h2 className="text-3xl md:text-4xl lg:text-6xl font-black text-white leading-tight">
               Have a project<br />
-              <span className="text-[#B5552A]">in mind?</span>
+              <span className="text-[#8B31C7]">in mind?</span>
             </h2>
             <a
               href="https://wa.me/919632498185"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/15 hover:border-[#B5552A]/60 hover:bg-[#B5552A]/10 text-white text-sm font-semibold transition-all duration-300 self-start md:self-auto"
+              className="group inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/15 hover:border-[#8B31C7]/60 hover:bg-[#8B31C7]/10 text-white text-sm font-semibold transition-all duration-300 self-start md:self-auto"
             >
               Start a Conversation
-              <span className="w-7 h-7 rounded-full bg-[#B5552A] flex items-center justify-center text-white text-xs group-hover:scale-110 transition-transform">→</span>
+              <span className="w-7 h-7 rounded-full bg-[#8B31C7] flex items-center justify-center text-white text-xs group-hover:scale-110 transition-transform">→</span>
             </a>
           </div>
         </motion.div>
@@ -87,7 +87,7 @@ export default function Footer() {
             {/* Contact info */}
             <div className="space-y-3 pt-2">
               <a href="mailto:hello@criador.studio" className="flex items-center gap-3 text-sm text-white/50 hover:text-white transition-colors group">
-                <svg className="w-4 h-4 text-[#B5552A] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <svg className="w-4 h-4 text-[#8B31C7] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 hello@criador.studio
               </a>
               <a href="https://wa.me/919632498185" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-white/50 hover:text-white transition-colors group">
@@ -100,7 +100,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 text-sm text-white/50 hover:text-white transition-colors group"
               >
-                <svg className="w-4 h-4 text-[#B5552A] shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <svg className="w-4 h-4 text-[#8B31C7] shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 <span>65/1C, below AirTel, Kaikondrahalli,<br />Sarjapur Main Road,<br />Bengaluru, Karnataka 560035</span>
               </a>
             </div>
@@ -109,7 +109,7 @@ export default function Footer() {
             <div className="flex gap-2.5 pt-2">
               {socials.map((s) => (
                 <a key={s.label} href={s.href} aria-label={s.label}
-                  className="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-[#B5552A]/50 hover:bg-[#B5552A]/10 transition-all duration-200">
+                  className="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-[#8B31C7]/50 hover:bg-[#8B31C7]/10 transition-all duration-200">
                   {s.icon}
                 </a>
               ))}
@@ -129,7 +129,7 @@ export default function Footer() {
               {serviceLinks.map((item) => (
                 <a key={item} href="#services"
                   className="text-white/45 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2 group">
-                  <span className="w-1 h-1 rounded-full bg-[#B5552A]/50 group-hover:bg-[#B5552A] transition-colors shrink-0" />
+                  <span className="w-1 h-1 rounded-full bg-[#8B31C7]/50 group-hover:bg-[#8B31C7] transition-colors shrink-0" />
                   {item}
                 </a>
               ))}
@@ -150,7 +150,7 @@ export default function Footer() {
                 <li key={item}>
                   <a href={`#${item.toLowerCase()}`}
                     className="text-white/45 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2 group">
-                    <span className="w-1 h-1 rounded-full bg-[#B5552A]/50 group-hover:bg-[#B5552A] transition-colors shrink-0" />
+                    <span className="w-1 h-1 rounded-full bg-[#8B31C7]/50 group-hover:bg-[#8B31C7] transition-colors shrink-0" />
                     {item}
                   </a>
                 </li>
@@ -162,14 +162,13 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/25 text-sm">© 2026 Criador Creative Studio. All Rights Reserved.</p>
-          <p className="text-white/20 text-xs tracking-widest uppercase">Made with ♥ in India</p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-white/25 hover:text-white/60 text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-white/25 hover:text-white/60 text-sm transition-colors">Terms of Service</a>
+          <p className="text-white/25 text-sm">© 2021 Criador Creative Studio. All Rights Reserved.</p>
+<div className="flex items-center gap-6">
+            <a href="/privacy-policy" className="text-white/25 hover:text-white/60 text-sm transition-colors">Privacy Policy</a>
+            <a href="/terms-of-service" className="text-white/25 hover:text-white/60 text-sm transition-colors">Terms of Service</a>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-white/40 hover:text-white hover:border-[#B5552A]/50 hover:bg-[#B5552A]/10 transition-all duration-200"
+              className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-white/40 hover:text-white hover:border-[#8B31C7]/50 hover:bg-[#8B31C7]/10 transition-all duration-200"
               aria-label="Back to top"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

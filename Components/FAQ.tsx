@@ -43,14 +43,14 @@ export default function FAQ() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-4">
+          <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-4">
             Common Questions
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26] mb-4">
-            Everything You Want to <span className="text-[#B5552A]">Know</span>
+            Everything You Want to <span className="text-[#8B31C7]">Know</span>
           </h2>
           <p className="text-[#8C857C] text-base max-w-md mx-auto">
-            Can't find your answer? <a href="#contact" className="text-[#B5552A] hover:underline underline-offset-2">Just ask us directly →</a>
+            Can't find your answer? <a href="#contact" className="text-[#8B31C7] hover:underline underline-offset-2">Just ask us directly →</a>
           </p>
         </motion.div>
 
@@ -66,17 +66,17 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between px-8 py-6 text-left hover:bg-[#B5552A]/[0.03] transition-colors duration-200"
+                className="w-full flex items-center justify-between px-8 py-6 text-left hover:bg-[#8B31C7]/[0.03] transition-colors duration-200"
               >
                 <span className="flex items-start gap-4 pr-8">
-                  <span className={`text-xs font-black mt-0.5 shrink-0 transition-colors duration-200 ${open === i ? 'text-[#B5552A]' : 'text-[#8C857C]/40'}`}>
+                  <span className={`text-xs font-black mt-0.5 shrink-0 transition-colors duration-200 ${open === i ? 'text-[#8B31C7]' : 'text-[#8C857C]/40'}`}>
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <span className="font-semibold text-[#2E2A26] text-base">{faq.q}</span>
                 </span>
                 <span
                   className={`shrink-0 w-7 h-7 rounded-full border border-[#8C857C]/30 flex items-center justify-center text-[#8C857C] transition-all duration-300 ${
-                    open === i ? 'bg-[#B5552A] border-[#B5552A] text-white rotate-45' : ''
+                    open === i ? 'bg-[#8B31C7] border-[#8B31C7] text-white rotate-45' : ''
                   }`}
                 >
                   <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

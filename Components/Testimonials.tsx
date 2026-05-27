@@ -8,7 +8,7 @@ const reviews = [
     name: 'Arjun Mehta',
     role: 'Founder, Zinox Kitchen',
     initials: 'AM',
-    gradient: 'from-[#B5552A] to-[#C8703F]',
+    gradient: 'from-[#8B31C7] to-[#A040E0]',
   },
   {
     quote: "We went from 'just another startup' to a brand people actually remember. Our Instagram DMs tripled in the first month.",
@@ -79,23 +79,23 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 md:mb-20"
         >
-          <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-5">
+          <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-5">
             Social Proof
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26]">
-            Don't Take <span className="text-[#B5552A]">Our Word</span> For It
+            Don't Take <span className="text-[#8B31C7]">Our Word</span> For It
           </h2>
         </motion.div>
 
         {/* Featured review */}
         <div className="glass rounded-[40px] p-10 lg:p-16 relative overflow-hidden mb-6 border border-[#8C857C]/15">
           {/* Subtle background gradient */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(181,85,42,0.06),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(139,49,199,0.06),transparent_60%)]" />
 
           {/* Large quote mark */}
           <div
             className="absolute -top-2 -left-1 text-9xl font-black leading-none select-none pointer-events-none"
-            style={{ color: 'rgba(181,85,42,0.07)' }}
+            style={{ color: 'rgba(139,49,199,0.07)' }}
           >
             "
           </div>
@@ -104,7 +104,7 @@ export default function Testimonials() {
             {/* Stars */}
             <div className="flex justify-center gap-1 mb-10">
               {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-[#B5552A] text-base">★</span>
+                <span key={i} className="text-[#8B31C7] text-base">★</span>
               ))}
             </div>
 
@@ -150,7 +150,7 @@ export default function Testimonials() {
                 >
                   {i === active && (
                     <span
-                      className="absolute inset-y-0 left-0 bg-[#B5552A] rounded-full"
+                      className="absolute inset-y-0 left-0 bg-[#8B31C7] rounded-full"
                       style={{ width: `${progress}%` }}
                     />
                   )}
@@ -172,13 +172,13 @@ export default function Testimonials() {
               onClick={() => setActive(i)}
               className={`glass rounded-2xl p-5 cursor-pointer transition-all duration-300 border ${
                 i === active
-                  ? 'border-[#B5552A]/35 shadow-md shadow-[#B5552A]/10'
+                  ? 'border-[#8B31C7]/35 shadow-md shadow-[#8B31C7]/10'
                   : 'border-transparent hover:border-[#8C857C]/20'
               }`}
             >
               <div className="flex gap-0.5 mb-3">
                 {[...Array(5)].map((_, s) => (
-                  <span key={s} className="text-[#B5552A] text-xs">★</span>
+                  <span key={s} className="text-[#8B31C7] text-xs">★</span>
                 ))}
               </div>
               <p className="text-[#2E2A26] text-sm leading-relaxed line-clamp-3 mb-4">&ldquo;{rev.quote}&rdquo;</p>

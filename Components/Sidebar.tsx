@@ -8,7 +8,7 @@ export default function Sidebar() {
         <div className="w-px h-16 bg-[#8C857C]/30" />
         <a
           href="#portfolio"
-          className="text-[10px] font-semibold text-[#8C857C] hover:text-[#B5552A] tracking-[4px] uppercase transition-colors duration-200"
+          className="text-[10px] font-semibold text-[#8C857C] hover:text-[#8B31C7] tracking-[4px] uppercase transition-colors duration-200"
           style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
         >
           Our Work
@@ -25,7 +25,7 @@ export default function Sidebar() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
-          className="text-[#8C857C] hover:text-[#B5552A] transition-colors duration-200"
+          className="text-[#8C857C] hover:text-[#8B31C7] transition-colors duration-200"
         >
           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
@@ -38,7 +38,7 @@ export default function Sidebar() {
 
         <a
           href="#contact"
-          className="text-[10px] font-semibold text-[#8C857C] hover:text-[#B5552A] tracking-[4px] uppercase transition-colors duration-200"
+          className="text-[10px] font-semibold text-[#8C857C] hover:text-[#8B31C7] tracking-[4px] uppercase transition-colors duration-200"
           style={{ writingMode: 'vertical-rl' }}
         >
           Get In Touch

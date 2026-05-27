@@ -75,7 +75,7 @@ export default function Hero() {
       {/* Animated background orbs */}
       <motion.div
         className="absolute top-1/4 -left-32 w-96 h-96 rounded-full blur-3xl"
-        style={{ background: 'rgba(181,85,42,0.10)' }}
+        style={{ background: 'rgba(139,49,199,0.10)' }}
         animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
         transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
       />
@@ -85,7 +85,7 @@ export default function Hero() {
         animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0.7, 0.4] }}
         transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,#B5552A18,transparent)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,#8B31C718,transparent)]" />
 
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-20 items-center relative z-10 w-full py-12 md:py-20">
 
@@ -95,14 +95,14 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 mb-6 md:mb-8 px-4 py-2 rounded-full border border-[#B5552A]/25 bg-[#B5552A]/5"
+            className="inline-flex items-center gap-2 mb-6 md:mb-8 px-4 py-2 rounded-full border border-[#8B31C7]/25 bg-[#8B31C7]/5"
           >
             <motion.span
-              className="w-1.5 h-1.5 rounded-full bg-[#B5552A]"
+              className="w-1.5 h-1.5 rounded-full bg-[#8B31C7]"
               animate={{ scale: [1, 1.6, 1], opacity: [1, 0.4, 1] }}
               transition={{ duration: 1.8, repeat: Infinity }}
             />
-            <p className="uppercase tracking-[3px] text-[#B5552A] text-[11px] font-semibold">Premium Creative Agency</p>
+            <p className="uppercase tracking-[3px] text-[#8B31C7] text-[11px] font-semibold">Premium Creative Agency</p>
           </motion.div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight text-[#2E2A26] relative">
@@ -148,7 +148,7 @@ export default function Hero() {
             className="flex flex-wrap gap-3 md:gap-4 mt-8 md:mt-10"
           >
             <MagneticButton>
-              <a href="#portfolio" className="inline-block px-7 md:px-9 py-3.5 md:py-4 bg-[#B5552A] hover:bg-[#9E4822] text-white rounded-full text-sm md:text-base font-semibold transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-[#B5552A]/25">
+              <a href="#portfolio" className="inline-block px-7 md:px-9 py-3.5 md:py-4 bg-[#8B31C7] hover:bg-[#7A28B0] text-white rounded-full text-sm md:text-base font-semibold transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-[#8B31C7]/25">
                 View Portfolio
               </a>
             </MagneticButton>
@@ -214,7 +214,7 @@ export default function Hero() {
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.4 }}
                     >
-                      <p className="text-[10px] uppercase tracking-widest text-[#B5552A] mb-1">{previews[current].category}</p>
+                      <p className="text-[10px] uppercase tracking-widest text-[#8B31C7] mb-1">{previews[current].category}</p>
                       <p className="text-white font-black text-xl">{previews[current].label}</p>
                     </motion.div>
                   </AnimatePresence>
@@ -226,7 +226,7 @@ export default function Hero() {
                   <button
                     key={i}
                     onClick={() => setCurrent(i)}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? 'w-6 bg-[#B5552A]' : 'w-2 bg-[#8C857C]/30'}`}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? 'w-6 bg-[#8B31C7]' : 'w-2 bg-[#8C857C]/30'}`}
                   />
                 ))}
               </div>
@@ -234,7 +234,7 @@ export default function Hero() {
               <div className="flex gap-2 mt-3">
                 {previews.map((p, i) => (
                   <button key={i} onClick={() => setCurrent(i)}
-                    className={`flex-1 h-14 rounded-xl overflow-hidden border-2 transition-all duration-200 ${i === current ? 'border-[#B5552A]' : 'border-transparent opacity-40 hover:opacity-70'}`}>
+                    className={`flex-1 h-14 rounded-xl overflow-hidden border-2 transition-all duration-200 ${i === current ? 'border-[#8B31C7]' : 'border-transparent opacity-40 hover:opacity-70'}`}>
                     <img src={p.image} alt={p.label} className="w-full h-full object-cover" />
                   </button>
                 ))}
@@ -285,14 +285,14 @@ export default function Hero() {
               />
             </AnimatePresence>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-              <p className="text-[9px] uppercase tracking-widest text-[#B5552A]">{previews[current].category}</p>
+              <p className="text-[9px] uppercase tracking-widest text-[#8B31C7]">{previews[current].category}</p>
               <p className="text-white font-black text-base">{previews[current].label}</p>
             </div>
           </div>
           <div className="flex justify-center gap-2 mt-3">
             {previews.map((_, i) => (
               <button key={i} onClick={() => setCurrent(i)}
-                className={`h-1 rounded-full transition-all duration-300 ${i === current ? 'w-5 bg-[#B5552A]' : 'w-1.5 bg-[#8C857C]/30'}`} />
+                className={`h-1 rounded-full transition-all duration-300 ${i === current ? 'w-5 bg-[#8B31C7]' : 'w-1.5 bg-[#8C857C]/30'}`} />
             ))}
           </div>
         </div>

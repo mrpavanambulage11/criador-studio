@@ -2,33 +2,32 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
-const services = [
-  'Branding', 'Catalog Designs', 'Visiting Cards', 'Label Designing',
-  'Social Media Marketing', 'Search Engine Optimization', 'Web Hosting', 'E-Commerce', 'Other',
-]
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault()
     const form = e.currentTarget
     const name = (form.elements.namedItem('name') as HTMLInputElement).value
     const email = (form.elements.namedItem('email') as HTMLInputElement).value
-    const company = (form.elements.namedItem('company') as HTMLInputElement).value
-    const service = (form.elements.namedItem('service') as HTMLSelectElement).value
+    const phone = (form.elements.namedItem('phone') as HTMLInputElement).value
     const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value
 
-    const text = `Hi Criador! 👋\n\n*Name:* ${name}\n*Email:* ${email}\n*Company:* ${company || 'N/A'}\n*Service:* ${service || 'N/A'}\n*Message:* ${message}`
-    const whatsappUrl = `https://wa.me/919632498185?text=${encodeURIComponent(text)}`
-
     setLoading(true)
-    setTimeout(() => {
+    try {
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone, message }),
+      })
+    } catch (err) {
+      console.error(err)
+    } finally {
       setLoading(false)
       setSubmitted(true)
-      window.open(whatsappUrl, '_blank')
-    }, 900)
+    }
   }
 
   return (
@@ -42,7 +41,7 @@ export default function ContactForm() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-6">
+            <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-6">
               Get In Touch
             </p>
             <h2 className="text-5xl lg:text-6xl font-black leading-tight text-[#2E2A26] mb-8">
@@ -70,13 +69,13 @@ export default function ContactForm() {
                 },
               ].map(({ label, value, href, icon }) => (
                 <div key={label} className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#B5552A]/10 border border-[#B5552A]/20 flex items-center justify-center text-[#B5552A] shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-[#8B31C7]/10 border border-[#8B31C7]/20 flex items-center justify-center text-[#8B31C7] shrink-0">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">{icon}</svg>
                   </div>
                   <div>
                     <p className="font-semibold text-sm text-[#2E2A26]">{label}</p>
                     {href ? (
-                      <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="text-[#8C857C] text-sm hover:text-[#B5552A] transition-colors">{value}</a>
+                      <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="text-[#8C857C] text-sm hover:text-[#8B31C7] transition-colors">{value}</a>
                     ) : (
                       <p className="text-[#8C857C] text-sm">{value}</p>
                     )}
@@ -103,58 +102,42 @@ export default function ContactForm() {
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
                 </div>
-                <h3 className="text-2xl font-black text-[#2E2A26] mb-3">Opening WhatsApp!</h3>
-                <p className="text-[#8C857C]">Your message has been prepared. Complete it on WhatsApp — we reply within 24 hours.</p>
+                <h3 className="text-2xl font-black text-[#2E2A26] mb-3">Thank You! 🎉</h3>
+                <p className="text-[#8C857C] text-base leading-relaxed">We've received your message and will connect with you shortly. Thank you for reaching out!</p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="glass rounded-3xl p-8 space-y-5">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Full Name *</label>
-                    <input type="text" name="name" required placeholder="John Smith"
-                      className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 bg-[#D6CFC4]/30 text-[#2E2A26] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#B5552A] focus:ring-2 focus:ring-[#B5552A]/10 transition-all" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Email *</label>
-                    <input type="email" name="email" required placeholder="you@company.com"
-                      className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 bg-[#D6CFC4]/30 text-[#2E2A26] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#B5552A] focus:ring-2 focus:ring-[#B5552A]/10 transition-all" />
-                  </div>
+                <div>
+                  <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Full Name *</label>
+                  <input type="text" name="name" required placeholder="John Smith"
+                    className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 bg-[#D6CFC4]/30 text-[#2E2A26] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#8B31C7] focus:ring-2 focus:ring-[#8B31C7]/10 transition-all" />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Company / Brand</label>
-                  <input type="text" name="company" placeholder="Your company name"
-                    className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 bg-[#D6CFC4]/30 text-[#2E2A26] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#B5552A] focus:ring-2 focus:ring-[#B5552A]/10 transition-all" />
+                  <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Email Address *</label>
+                  <input type="email" name="email" required placeholder="you@company.com"
+                    className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 bg-[#D6CFC4]/30 text-[#2E2A26] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#8B31C7] focus:ring-2 focus:ring-[#8B31C7]/10 transition-all" />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Service Needed</label>
-                  <div className="relative">
-                    <select name="service" className="w-full px-4 py-3 pr-10 rounded-xl border border-[#8C857C]/25 bg-[#F2EDE6] text-[#2E2A26] text-sm focus:outline-none focus:border-[#B5552A] focus:ring-2 focus:ring-[#B5552A]/10 transition-all appearance-none cursor-pointer">
-                      <option value="" disabled>Select a service...</option>
-                      {services.map((s) => <option key={s} value={s}>{s}</option>)}
-                    </select>
-                    <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-[#8C857C]">
-                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="6 9 12 15 18 9"/>
-                      </svg>
-                    </div>
-                  </div>
+                  <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Phone Number</label>
+                  <input type="tel" name="phone" placeholder="+91 98765 43210"
+                    className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 bg-[#D6CFC4]/30 text-[#2E2A26] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#8B31C7] focus:ring-2 focus:ring-[#8B31C7]/10 transition-all" />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Tell Us About Your Project *</label>
+                  <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Message *</label>
                   <textarea name="message" required rows={4} placeholder="Describe your project, goals, and timeline..."
-                    className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 bg-[#D6CFC4]/30 text-[#2E2A26] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#B5552A] focus:ring-2 focus:ring-[#B5552A]/10 transition-all resize-none" />
+                    className="w-full px-4 py-3 rounded-xl border border-[#8C857C]/25 bg-[#D6CFC4]/30 text-[#2E2A26] text-sm placeholder-[#8C857C] focus:outline-none focus:border-[#8B31C7] focus:ring-2 focus:ring-[#8B31C7]/10 transition-all resize-none" />
                 </div>
 
                 <motion.button
                   type="submit"
                   disabled={loading}
                   whileTap={{ scale: loading ? 1 : 0.97 }}
-                  whileHover={{ scale: loading ? 1 : 1.02, boxShadow: loading ? 'none' : '0 8px 30px rgba(181,85,42,0.4)' }}
+                  whileHover={{ scale: loading ? 1 : 1.02, boxShadow: loading ? 'none' : '0 8px 30px rgba(139,49,199,0.4)' }}
                   transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                  className="w-full py-4 bg-[#B5552A] hover:bg-[#9E4822] disabled:opacity-70 disabled:cursor-not-allowed text-white rounded-full font-medium text-base transition-colors duration-200 shadow-lg shadow-[#B5552A]/20 flex items-center justify-center gap-2"
+                  className="w-full py-4 bg-[#8B31C7] hover:bg-[#7A28B0] disabled:opacity-70 disabled:cursor-not-allowed text-white rounded-full font-medium text-base transition-colors duration-200 shadow-lg shadow-[#8B31C7]/20 flex items-center justify-center gap-2"
                 >
                   {loading ? (
                     <>

@@ -91,7 +91,7 @@ export default function CustomCursor() {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9999] rounded-full border-2 border-[#B5552A]"
+        className="fixed top-0 left-0 pointer-events-none z-[9999] rounded-full border-2 border-[#8B31C7]"
         style={{
           x: outerX,
           y: outerY,
@@ -102,7 +102,7 @@ export default function CustomCursor() {
         }}
       />
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9999] rounded-full bg-[#B5552A]"
+        className="fixed top-0 left-0 pointer-events-none z-[9999] rounded-full bg-[#8B31C7]"
         style={{
           x: dotX,
           y: dotY,

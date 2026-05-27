@@ -6,7 +6,7 @@ import { bp } from '@/lib/bp'
 type Work = { category: string; title: string; year: string; wide: boolean; image: string; tag: string; color: string }
 
 const row1: Work[] = [
-  { category: 'Branding', title: 'Luxe Studio', year: '2026', wide: false, image: bp('/portfolio/luxe.jpg'), tag: '🏆 Best of 2026', color: '#B5552A' },
+  { category: 'Branding', title: 'Luxe Studio', year: '2026', wide: false, image: bp('/portfolio/luxe.jpg'), tag: '🏆 Best of 2026', color: '#8B31C7' },
   { category: 'UI/UX Design', title: 'Fintech App', year: '2025', wide: false, image: bp('/portfolio/fintech.jpg'), tag: '📱 App Design', color: '#2952A3' },
 ]
 
@@ -138,10 +138,10 @@ export default function Portfolio() {
           transition={{ duration: 0.7 }}
           className="mb-10"
         >
-          <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-5">Selected Work</p>
+          <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-5">Selected Work</p>
           <div className="flex items-end justify-between flex-wrap gap-8">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26]">
-              Work That <span className="text-[#B5552A]">Speaks</span>
+              Work That <span className="text-[#8B31C7]">Speaks</span>
             </h2>
           </div>
         </motion.div>
@@ -160,7 +160,7 @@ export default function Portfolio() {
               onClick={() => setActiveFilter(tab)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                 activeFilter === tab
-                  ? 'bg-[#B5552A] text-white shadow-md shadow-[#B5552A]/25'
+                  ? 'bg-[#8B31C7] text-white shadow-md shadow-[#8B31C7]/25'
                   : 'bg-[#2E2A26]/5 text-[#8C857C] hover:text-[#2E2A26] hover:bg-[#2E2A26]/10'
               }`}
             >
@@ -190,13 +190,13 @@ export default function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 md:mt-16 glass rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-[#B5552A]/10"
+          className="mt-12 md:mt-16 glass rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-[#8B31C7]/10"
         >
           <div>
             <p className="text-xl font-black text-[#2E2A26]">Want results like these?</p>
             <p className="text-[#8C857C] text-sm mt-1">Let's build something unforgettable together.</p>
           </div>
-          <a href="#contact" className="px-8 py-4 bg-[#B5552A] hover:bg-[#9E4822] text-white rounded-full text-sm font-semibold transition-all hover:scale-105 active:scale-95 whitespace-nowrap inline-block">
+          <a href="#contact" className="px-8 py-4 bg-[#8B31C7] hover:bg-[#7A28B0] text-white rounded-full text-sm font-semibold transition-all hover:scale-105 active:scale-95 whitespace-nowrap inline-block">
             Start Your Project →
           </a>
         </motion.div>

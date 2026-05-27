@@ -43,44 +43,49 @@ export default function Navbar() {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between" style={{ paddingTop: 'max(1rem, env(safe-area-inset-top))' }}>
-          <a href="/" className="group">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-20" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
+          {/* Logo */}
+          <a href="/" aria-label="Criador Creative Studio — Home" className="shrink-0">
             <span className="inline-flex items-center bg-[#F2EDE6] rounded-sm">
-              <img src={bp('/logo.png.jpeg')} alt="Criador" className="h-8 w-auto" style={{ mixBlendMode: 'multiply' }} />
+              <img src={bp('/logo.png.jpeg')} alt="Criador Creative Studio" className="h-16 w-auto" style={{ mixBlendMode: 'multiply' }} />
             </span>
           </a>
 
-          <div className="hidden md:flex items-center gap-1">
+          {/* Desktop nav */}
+          <nav aria-label="Main navigation" className="hidden md:flex items-center gap-1">
             {navLinks.map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className={`px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full hover:bg-[#2E2A26]/5 ${activeSection === item.toLowerCase() ? 'text-[#B5552A] font-semibold' : 'text-[#8C857C] hover:text-[#2E2A26]'}`}
+                className={`px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full hover:bg-[#2E2A26]/5 ${activeSection === item.toLowerCase() ? 'text-[#8B31C7] font-semibold' : 'text-[#8C857C] hover:text-[#2E2A26]'}`}
               >
                 {item}
               </a>
             ))}
-          </div>
+          </nav>
 
           <div className="flex items-center gap-3">
             <motion.a
-              href="#contact"
+              href="tel:+919632498185"
               whileTap={{ scale: 0.94 }}
-              className="hidden md:inline-block px-5 py-2.5 rounded-full bg-[#B5552A] text-white text-sm font-semibold transition-all duration-200 hover:bg-[#9E4822] hover:scale-105 active:scale-95 relative"
+              className="hidden md:inline-block px-5 py-2.5 rounded-full bg-[#8B31C7] text-white text-sm font-semibold transition-all duration-200 hover:bg-[#7A28B0] hover:scale-105 active:scale-95 relative"
             >
               {scrolled && (
-                <span className="absolute inset-0 rounded-full animate-ping bg-[#B5552A]/30 pointer-events-none" style={{ animationDuration: '2s' }} />
+                <span className="absolute inset-0 rounded-full animate-ping bg-[#8B31C7]/30 pointer-events-none" style={{ animationDuration: '2s' }} />
               )}
               Book Consultation
             </motion.a>
+
+            {/* Mobile hamburger */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8"
-              aria-label="Toggle menu"
+              className="md:hidden flex flex-col justify-center items-center gap-[5px] w-11 h-11 rounded-xl bg-[#2E2A26]/8 active:bg-[#2E2A26]/15 transition-colors"
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={menuOpen}
             >
-              <span className={`block w-6 h-0.5 bg-[#2E2A26] transition-all duration-300 origin-center ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-              <span className={`block w-6 h-0.5 bg-[#2E2A26] transition-all duration-300 ${menuOpen ? 'opacity-0 scale-x-0' : ''}`} />
-              <span className={`block w-6 h-0.5 bg-[#2E2A26] transition-all duration-300 origin-center ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+              <span className={`block w-5 h-[2px] bg-[#2E2A26] rounded-full transition-all duration-300 origin-center ${menuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
+              <span className={`block w-5 h-[2px] bg-[#2E2A26] rounded-full transition-all duration-300 ${menuOpen ? 'opacity-0 scale-x-0' : ''}`} />
+              <span className={`block w-5 h-[2px] bg-[#2E2A26] rounded-full transition-all duration-300 origin-center ${menuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
             </button>
           </div>
         </div>
@@ -93,7 +98,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed top-[64px] inset-x-0 z-40 bg-[#F2EDE6]/96 backdrop-blur-2xl border-b border-[#8C857C]/15 md:hidden"
+            className="fixed top-20 inset-x-0 z-40 bg-[#F2EDE6]/98 backdrop-blur-2xl border-b border-[#8C857C]/15 md:hidden shadow-lg"
           >
             <div className="flex flex-col px-6 py-6 gap-1" style={{ paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}>
               {navLinks.map((item, i) => (
@@ -110,9 +115,9 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <a
-                href="#contact"
+                href="tel:+919632498185"
                 onClick={() => setMenuOpen(false)}
-                className="mt-4 w-full py-3.5 rounded-full bg-[#B5552A] hover:bg-[#9E4822] text-white text-sm font-semibold transition-all text-center block"
+                className="mt-4 w-full py-3.5 rounded-full bg-[#8B31C7] hover:bg-[#7A28B0] text-white text-sm font-semibold transition-all text-center block"
               >
                 Book Consultation
               </a>
@@ -122,4 +127,7 @@ export default function Navbar() {
       </AnimatePresence>
     </>
   )
+
+
+
 }

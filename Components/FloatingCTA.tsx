@@ -20,14 +20,14 @@ export default function FloatingCTA() {
     <AnimatePresence>
       {visible && (
         <motion.a
-          href="#contact"
+          href="tel:+919632498185"
           initial={{ opacity: 0, scale: 0, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0, y: 20 }}
           transition={{ type: 'spring', stiffness: 300, damping: 25 }}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          className="fixed bottom-8 right-4 md:right-8 z-50 flex items-center gap-3 bg-[#B5552A] hover:bg-[#9E4822] text-white rounded-full shadow-lg shadow-[#B5552A]/30 transition-colors duration-200 overflow-hidden"
+          className="fixed bottom-8 right-4 md:right-8 z-50 flex items-center gap-3 bg-[#8B31C7] hover:bg-[#7A28B0] text-white rounded-full shadow-lg shadow-[#8B31C7]/30 transition-colors duration-200 overflow-hidden"
           style={{
             paddingLeft: 14,
             paddingRight: showLabel ? 20 : 14,

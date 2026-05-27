@@ -57,7 +57,7 @@ export default function Preloader() {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -24, opacity: 0 }}
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                className="text-[#B5552A] text-sm font-semibold tracking-[4px] uppercase text-center"
+                className="text-[#8B31C7] text-sm font-semibold tracking-[4px] uppercase text-center"
               >
                 {words[wordIndex]}
               </motion.p>
@@ -67,7 +67,7 @@ export default function Preloader() {
           {/* Progress bar */}
           <div className="w-48 h-[2px] bg-white/10 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-[#B5552A] rounded-full"
+              className="h-full bg-[#8B31C7] rounded-full"
               animate={{ width: `${Math.min(progress, 100)}%` }}
               transition={{ duration: 0.1 }}
             />

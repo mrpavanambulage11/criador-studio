@@ -41,7 +41,7 @@ const services = [
   {
     title: 'Branding',
     desc: 'Logo systems, visual identities, and brand guidelines built to make your business unforgettable.',
-    gradient: 'from-[#B5552A] to-[#8B3A1C]',
+    gradient: 'from-[#8B31C7] to-[#6B2490]',
     image: bp('/services/branding.jpg.png'),
     iconBg: 'bg-white/15',
     icon: (
@@ -169,7 +169,7 @@ export default function Services() {
   const mouseX = useMotionValue(-1000)
   const mouseY = useMotionValue(-1000)
   const [isInGrid, setIsInGrid] = useState(false)
-  const spotlight = useMotionTemplate`radial-gradient(400px circle at ${mouseX}px ${mouseY}px, rgba(181,85,42,0.12), transparent 70%)`
+  const spotlight = useMotionTemplate`radial-gradient(400px circle at ${mouseX}px ${mouseY}px, rgba(139,49,199,0.12), transparent 70%)`
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = gridRef.current?.getBoundingClientRect()
@@ -189,12 +189,12 @@ export default function Services() {
           transition={{ duration: 0.7 }}
           className="mb-12"
         >
-          <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-5">What We Do</p>
+          <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-5">What We Do</p>
           <div className="flex items-end justify-between flex-wrap gap-8">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2E2A26]">
-              <TextReveal text="Our" />{' '}<span className="text-[#B5552A]"><TextReveal text="Services" delay={0.1} /></span>
+              <TextReveal text="Our" />{' '}<span className="text-[#8B31C7]"><TextReveal text="Services" delay={0.1} /></span>
             </h2>
-            <p className="text-[#8C857C] max-w-[260px] text-base leading-relaxed border-l-2 border-[#B5552A]/30 pl-4">
+            <p className="text-[#8C857C] max-w-[260px] text-base leading-relaxed border-l-2 border-[#8B31C7]/30 pl-4">
               End-to-end creative services for brands that want to make an impact.
             </p>
           </div>
@@ -228,11 +228,11 @@ export default function Services() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               className="h-full"
             >
-            <TiltCard className="group rounded-2xl overflow-hidden cursor-pointer border border-[#8C857C]/15 hover:border-[#B5552A]/30 hover:shadow-xl transition-all duration-300 h-full">
+            <TiltCard className="group rounded-2xl overflow-hidden cursor-pointer border border-[#8C857C]/15 hover:border-[#8B31C7]/30 hover:shadow-xl transition-all duration-300 h-full">
               {/* Visual header */}
               <div className={`relative overflow-hidden h-40 ${!service.image ? `bg-gradient-to-br ${service.gradient}` : ''}`}>
                 {index === 0 && (
-                  <div className="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#B5552A] text-white tracking-wide shadow-md">
+                  <div className="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#8B31C7] text-white tracking-wide shadow-md">
                     ★ Most Popular
                   </div>
                 )}
@@ -257,7 +257,7 @@ export default function Services() {
               <div className="glass p-6 h-full">
                 <h3 className="text-base font-bold mb-2 text-[#2E2A26]">{service.title}</h3>
                 <p className="text-[#8C857C] leading-relaxed text-sm">{service.desc}</p>
-                <a href="#contact" className="mt-4 text-[#B5552A] text-sm font-medium flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <a href="#contact" className="mt-4 text-[#8B31C7] text-sm font-medium flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   Learn more
                   <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>

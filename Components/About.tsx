@@ -28,7 +28,7 @@ const values = [
     title: 'Strategy First',
     desc: 'Every design decision is backed by brand strategy.',
     icon: (
-      <svg className="w-5 h-5 text-[#B5552A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg className="w-5 h-5 text-[#8B31C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/>
         <line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/>
         <line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/>
@@ -39,7 +39,7 @@ const values = [
     title: 'Bold Execution',
     desc: 'We craft with precision, detail, and intention.',
     icon: (
-      <svg className="w-5 h-5 text-[#B5552A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg className="w-5 h-5 text-[#8B31C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
       </svg>
     ),
@@ -48,7 +48,7 @@ const values = [
     title: 'Real Results',
     desc: 'Our work drives growth, not just impressions.',
     icon: (
-      <svg className="w-5 h-5 text-[#B5552A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg className="w-5 h-5 text-[#8B31C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
         <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
       </svg>
@@ -68,13 +68,13 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mb-16 md:mb-24"
         >
-          <p className="uppercase tracking-[4px] text-[#B5552A] text-sm font-medium mb-5">About Criador</p>
+          <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-5">About Criador</p>
           <div className="flex items-end justify-between flex-wrap gap-6">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-[#2E2A26]">
               We Create Brands<br />That People{' '}
-              <span className="text-[#B5552A]">Remember.</span>
+              <span className="text-[#8B31C7]">Remember.</span>
             </h2>
-            <p className="text-[#8C857C] max-w-sm leading-relaxed border-l-2 border-[#B5552A]/30 pl-4">
+            <p className="text-[#8C857C] max-w-sm leading-relaxed border-l-2 border-[#8B31C7]/30 pl-4">
               A premium creative studio combining strategy, design, and execution for modern brands.
             </p>
           </div>
@@ -104,9 +104,9 @@ export default function About() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: '-80px' }}
                   transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className="glass rounded-2xl p-5 flex items-start gap-4 border border-transparent hover:border-[#B5552A]/15 transition-colors duration-300"
+                  className="glass rounded-2xl p-5 flex items-start gap-4 border border-transparent hover:border-[#8B31C7]/15 transition-colors duration-300"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-[#B5552A]/10 border border-[#B5552A]/20 flex items-center justify-center shrink-0">
+                  <div className="w-9 h-9 rounded-xl bg-[#8B31C7]/10 border border-[#8B31C7]/20 flex items-center justify-center shrink-0">
                     {v.icon}
                   </div>
                   <div>
@@ -128,7 +128,7 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-80px' }}
                   transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className="glass rounded-2xl p-6 text-center border border-transparent hover:border-[#B5552A]/15 transition-colors duration-300"
+                  className="glass rounded-2xl p-6 text-center border border-transparent hover:border-[#8B31C7]/15 transition-colors duration-300"
                 >
                   <h3 className="text-4xl font-black text-[#2E2A26]">
                     <CountUp to={s.to} suffix={s.suffix} />
@@ -143,7 +143,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ delay: 0.4 }}
-              className="glass rounded-2xl p-6 border border-[#B5552A]/10"
+              className="glass rounded-2xl p-6 border border-[#8B31C7]/10"
             >
               <div className="flex items-center gap-4 mb-4">
                 <span className="inline-flex items-center bg-[#F2EDE6] rounded-sm px-2 py-1">
