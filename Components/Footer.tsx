@@ -77,7 +77,7 @@ export default function Footer() {
           >
             <a href="/" className="inline-block">
               <span className="inline-flex items-center bg-[#F2EDE6] rounded-sm px-1">
-                <img src={bp('/criador_logo.png')} alt="Criador" className="h-7 w-auto" style={{ mixBlendMode: 'multiply' }} />
+                <img src={bp('/criador_logo.png')} alt="Criador" className="h-7 w-auto" style={{ mixBlendMode: 'normal' }} />
               </span>
             </a>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs">
