@@ -52,6 +52,35 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
+        {/* CTA */}
+        <div className="max-w-3xl mx-auto px-4 md:px-6 mt-16">
+          <div className="bg-[#2E2A26] rounded-3xl px-8 py-12 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div>
+              <p className="uppercase tracking-[3px] text-[#8B31C7] text-xs font-bold mb-3">Criador Creative Studio</p>
+              <h3 className="text-2xl md:text-3xl font-black text-white leading-tight mb-2">
+                Ready to Build a Brand<br />People Remember?
+              </h3>
+              <p className="text-[#9B9591] text-sm leading-relaxed max-w-sm">
+                We craft bold identities, stunning visuals, and digital experiences that drive real results for forward-thinking brands.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 shrink-0">
+              <Link
+                href="/#contact"
+                className="bg-[#8B31C7] text-white font-bold px-8 py-3.5 rounded-full text-sm hover:bg-[#7a28b5] transition-colors text-center whitespace-nowrap"
+              >
+                Start a Project →
+              </Link>
+              <Link
+                href="/#portfolio"
+                className="border border-white/20 text-white font-semibold px-8 py-3.5 rounded-full text-sm hover:border-white/40 transition-colors text-center whitespace-nowrap"
+              >
+                View Our Work
+              </Link>
+            </div>
+          </div>
+        </div>
+
       </main>
       <Footer />
     </>
