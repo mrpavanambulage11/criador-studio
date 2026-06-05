@@ -1,19 +1,33 @@
 'use client'
-import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion'
-import { useEffect, useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 import { bp } from '@/lib/bp'
 
 function CountUp({ to, suffix = '' }: { to: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null)
-  const inView = useInView(ref, { once: true })
-  const count = useMotionValue(0)
-  const rounded = useTransform(count, (v) => `${Math.round(v)}${suffix}`)
+  const inView = useInView(ref, { once: true, margin: '-50px' })
+  const [count, setCount] = useState(to)
 
   useEffect(() => {
-    if (inView) animate(count, to, { duration: 2, ease: 'easeOut' })
-  }, [inView, count, to])
+    if (!inView) return
+    let start = 0
+    const duration = 1800
+    const step = 16
+    const increment = to / (duration / step)
+    setCount(0)
+    const timer = setInterval(() => {
+      start += increment
+      if (start >= to) {
+        setCount(to)
+        clearInterval(timer)
+      } else {
+        setCount(Math.round(start))
+      }
+    }, step)
+    return () => clearInterval(timer)
+  }, [inView, to])
 
-  return <motion.span ref={ref}>{rounded}</motion.span>
+  return <span ref={ref}>{count}{suffix}</span>
 }
 
 const stats = [
