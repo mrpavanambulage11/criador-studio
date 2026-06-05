@@ -1,4 +1,5 @@
-const WP_URL = process.env.NEXT_PUBLIC_WP_URL // e.g. https://yourblog.wordpress.com
+const SITE = process.env.NEXT_PUBLIC_WP_SITE ?? 'criadorblogcom.wordpress.com'
+const WP_API = `https://public-api.wordpress.com/wp/v2/sites/${SITE}`
 
 export interface BlogPost {
   id: number
@@ -12,7 +13,7 @@ export interface BlogPost {
 }
 
 async function fetchWP(path: string) {
-  const res = await fetch(`${WP_URL}/wp-json/wp/v2${path}`, {
+  const res = await fetch(`${WP_API}${path}`, {
     next: { revalidate: 60 },
   })
   if (!res.ok) return null
