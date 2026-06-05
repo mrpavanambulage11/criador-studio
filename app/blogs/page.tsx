@@ -28,7 +28,7 @@ export default async function BlogsPage() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post) => (
-                <Link key={post._id} href={`/blogs/${post.slug}`} className="group block">
+                <Link key={post.id} href={`/blogs/${post.slug}`} className="group block">
                   <article className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
                     <div className="aspect-[16/9] overflow-hidden bg-[#8B31C7]/10">
                       {post.coverImage ? (

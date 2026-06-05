@@ -42,7 +42,7 @@ export default function Blogs({ posts }: { posts: BlogPost[] }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {posts.map((post, i) => (
               <motion.div
-                key={post._id}
+                key={post.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
