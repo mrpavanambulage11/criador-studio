@@ -3,7 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { bp } from '@/lib/bp'
 
-const navLinks = ['Services', 'Portfolio', 'About', 'Process', 'Contact']
+const navLinks = [
+  { label: 'About Us', id: 'about' },
+  { label: 'Services', id: 'services' },
+  { label: 'Process', id: 'process' },
+  { label: 'Portfolio', id: 'portfolio' },
+  { label: 'Blogs', id: 'blogs' },
+  { label: 'Contact Us', id: 'contact' },
+]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -17,14 +24,15 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    const sections = navLinks.map((l) => document.getElementById(l.toLowerCase())).filter(Boolean) as HTMLElement[]
+    const sections = navLinks.map((l) => document.getElementById(l.id)).filter(Boolean) as HTMLElement[]
     const observer = new IntersectionObserver(
       (entries) => { entries.forEach((e) => { if (e.isIntersecting) setActiveSection(e.target.id) }) },
       { rootMargin: '-40% 0px -55% 0px' }
     )
     sections.forEach((s) => observer.observe(s))
     return () => observer.disconnect()
-  }, [])
+  }, 
+  [])
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
@@ -46,20 +54,18 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-20" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
           {/* Logo */}
           <a href="/" aria-label="Criador Creative Studio — Home" className="shrink-0">
-            <span className="inline-flex items-center bg-[#F2EDE6] rounded-sm">
-              <img src={bp('/logo.png.jpeg')} alt="Criador Creative Studio" className="h-16 w-auto" style={{ mixBlendMode: 'multiply' }} />
-            </span>
+            <img src={bp('/criador_logo.png')} alt="Criador Creative Studio" className="h-10 w-auto" style={{ mixBlendMode: 'multiply' }} />
           </a>
 
           {/* Desktop nav */}
           <nav aria-label="Main navigation" className="hidden md:flex items-center gap-1">
             {navLinks.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className={`px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full hover:bg-[#2E2A26]/5 ${activeSection === item.toLowerCase() ? 'text-[#8B31C7] font-semibold' : 'text-[#8C857C] hover:text-[#2E2A26]'}`}
+                key={item.id}
+                href={`#${item.id}`}
+                className={`px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full hover:bg-[#2E2A26]/5 ${activeSection === item.id ? 'text-[#8B31C7] font-semibold' : 'text-[#8C857C] hover:text-[#2E2A26]'}`}
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </nav>
@@ -103,15 +109,15 @@ export default function Navbar() {
             <div className="flex flex-col px-6 py-6 gap-1" style={{ paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}>
               {navLinks.map((item, i) => (
                 <motion.a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                  key={item.id}
+                  href={`#${item.id}`}
                   onClick={() => setMenuOpen(false)}
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
                   className="text-base font-medium text-[#8C857C] hover:text-[#2E2A26] transition-colors py-3 px-2 border-b border-[#8C857C]/10 last:border-0"
                 >
-                  {item}
+                  {item.label}
                 </motion.a>
               ))}
               <a

@@ -194,7 +194,7 @@ export default function Portfolio() {
         >
           <div>
             <p className="text-xl font-black text-[#2E2A26]">Want results like these?</p>
-            <p className="text-[#8C857C] text-sm mt-1">Let's build something unforgettable together.</p>
+            <p className="text-[#8C857C] text-sm mt-1">Your brand deserves to be unforgettable. Let's make it happen.</p>
           </div>
           <a href="#contact" className="px-8 py-4 bg-[#8B31C7] hover:bg-[#7A28B0] text-white rounded-full text-sm font-semibold transition-all hover:scale-105 active:scale-95 whitespace-nowrap inline-block">
             Start Your Project →

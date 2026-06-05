@@ -39,8 +39,23 @@ function TiltCard({ children, className }: { children: React.ReactNode; classNam
 
 const services = [
   {
+    title: 'Business Consulting',
+    desc: 'We analyse your business, identify growth gaps, and build a clear roadmap — from positioning and pricing strategy to operational efficiency and revenue scaling.',
+    gradient: 'from-[#1B3A4B] to-[#0D2233]',
+    image: bp('/services/branding.jpg.png'),
+    iconBg: 'bg-white/15',
+    icon: (
+      <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 20h20"/>
+        <path d="M4 20V10l8-8 8 8v10"/>
+        <path d="M9 20v-6h6v6"/>
+        <path d="M9 10h.01M15 10h.01"/>
+      </svg>
+    ),
+  },
+  {
     title: 'Branding',
-    desc: 'Logo systems, visual identities, and brand guidelines built to make your business unforgettable.',
+    desc: 'Logos, visual identities, brand positioning to make your business unforgettable.',
     gradient: 'from-[#8B31C7] to-[#6B2490]',
     image: bp('/services/branding.jpg.png'),
     iconBg: 'bg-white/15',
@@ -53,7 +68,7 @@ const services = [
   },
   {
     title: 'Catalog Designs',
-    desc: 'Professionally designed product and service catalogs that showcase your offerings with impact.',
+    desc: 'Professionally designed product and service catalogs that showcase your offerings for better customer influence.',
     gradient: 'from-[#2E4057] to-[#1a2a3a]',
     image: bp('/services/Catalog.jpg.png'),
     iconBg: 'bg-white/15',
@@ -82,9 +97,9 @@ const services = [
   },
   {
     title: 'Label Designing',
-    desc: 'Eye-catching product labels and stickers crafted to stand out on shelves and online.',
+    desc: 'Premium label designs crafted to elevate your product, strengthen your brand, and leave a lasting impression.',
     gradient: 'from-[#7B4F12] to-[#A0671A]',
-    image: bp('/services/label.jpg'),
+    image: bp('/services/Criador-preium-label.jpg'),
     iconBg: 'bg-white/15',
     icon: (
       <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
@@ -109,7 +124,7 @@ const services = [
   },
   {
     title: 'Search Engine Optimization',
-    desc: 'Data-driven SEO strategies that improve your rankings and drive organic traffic.',
+    desc: 'SEO, AIEO & GEO optimised strategies that improve your rankings and drive organic traffic.',
     gradient: 'from-[#1A4731] to-[#256B47]',
     image: bp('/services/seo.jpg'),
     iconBg: 'bg-white/15',
@@ -179,7 +194,7 @@ export default function Services() {
   }
 
   return (
-    <section id="services" className="py-12 md:py-16 px-4 md:px-6">
+    <section id="services" className="pt-8 pb-12 md:pt-10 md:pb-16 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -195,7 +210,7 @@ export default function Services() {
               <TextReveal text="Our" />{' '}<span className="text-[#8B31C7]"><TextReveal text="Services" delay={0.1} /></span>
             </h2>
             <p className="text-[#8C857C] max-w-[260px] text-base leading-relaxed border-l-2 border-[#8B31C7]/30 pl-4">
-              End-to-end creative services for brands that want to make an impact.
+              End to end business consulting and technical implementation for better business outcome.
             </p>
           </div>
         </motion.div>

@@ -34,7 +34,7 @@ const allClients = [
 
 export default function Clients() {
   return (
-    <section className="py-12 overflow-hidden">
+    <section className="pt-12 pb-0 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

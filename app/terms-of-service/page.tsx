@@ -24,7 +24,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-xl font-semibold text-[#2E2A26] mb-3">1. Company Overview</h2>
-            <p>Criador Studio is a creative and digital solutions agency headquartered in Bengaluru, Karnataka, India. We specialise in delivering end-to-end branding, design, and digital solutions to businesses across industries. Our services are governed exclusively by these Terms and any supplementary agreements executed in writing between the parties.</p>
+            <p>Criador Studio is a creative and digital solutions agency headquartered in Haralur, Bengaluru. We specialise in delivering end-to-end branding, design, and digital solutions to businesses across industries. Our services are governed exclusively by these Terms and any supplementary agreements executed in writing between the parties.</p>
           </section>
 
           <section>
@@ -141,7 +141,7 @@ export default function TermsOfService() {
             <p>For enquiries related to these Terms, please contact us at:</p>
             <div className="mt-3 space-y-1">
               <p className="font-semibold text-[#2E2A26]">Criador Studio</p>
-              <p>Bengaluru, Karnataka, India</p>
+              <p>Haralur, Bengaluru</p>
               <p>Email: <a href="mailto:hello@criadorstudio.com" className="text-[#8B31C7] hover:underline">hello@criadorstudio.com</a></p>
               <p>Phone: <a href="tel:+919632498185" className="text-[#8B31C7] hover:underline">+91 96324 98185</a></p>
               <p>Website: <a href="https://criador-studio.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B31C7] hover:underline">criador-studio.vercel.app</a></p>

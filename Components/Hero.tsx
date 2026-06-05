@@ -91,33 +91,67 @@ export default function Hero() {
 
         {/* Left */}
         <div>
+          {/* Eyebrow badge */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 mb-6 md:mb-8 px-4 py-2 rounded-full border border-[#8B31C7]/25 bg-[#8B31C7]/5"
+            className="inline-flex items-center gap-2 mb-6 md:mb-8 px-4 py-2 rounded-full border border-[#8B31C7]/30 bg-[#8B31C7]/8 shadow-sm shadow-[#8B31C7]/10"
           >
             <motion.span
-              className="w-1.5 h-1.5 rounded-full bg-[#8B31C7]"
+              className="w-2 h-2 rounded-full bg-[#8B31C7]"
               animate={{ scale: [1, 1.6, 1], opacity: [1, 0.4, 1] }}
               transition={{ duration: 1.8, repeat: Infinity }}
             />
-            <p className="uppercase tracking-[3px] text-[#8B31C7] text-[11px] font-semibold">Premium Creative Agency</p>
+            <p className="uppercase tracking-[3px] text-[#8B31C7] text-[11px] font-bold">Business Growth Agency</p>
           </motion.div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight text-[#2E2A26] relative">
-            <TextReveal text="We Don't Just" delay={0.1} />
-            <span style={{ display: 'block' }}>
-              <TextReveal text="Design Brands" delay={0.25} wordClassName="gradient-text" />
+          <h1 className="text-5xl md:text-6xl lg:text-[5.25rem] font-black leading-[1.05] tracking-tight text-[#2E2A26] relative">
+            {/* Line 1 — soft lead-in */}
+            <span className="block text-2xl md:text-3xl lg:text-4xl font-medium text-[#8C857C] tracking-wide mb-2">
+              <TextReveal text="We Help Your" delay={0.1} />
             </span>
-            <TextReveal
-              text="We Make Them Stick."
-              delay={0.45}
-              onComplete={() => shimmerControls.start({
-                x: ['-100%', '200%'],
-                transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 },
-              })}
-            />
+
+            {/* Line 2 — Business in */}
+            <span style={{ display: 'block' }}>
+              <TextReveal text="Business" delay={0.25} wordClassName="text-[#8B31C7]" />
+              {' '}
+              <TextReveal text="in" delay={0.38} wordClassName="text-[#2E2A26]" />
+            </span>
+
+            {/* Line 3 — Increasing */}
+            <span style={{ display: 'block' }}>
+              <TextReveal text="Increasing" delay={0.45} />
+            </span>
+
+            {/* Line 4 — Profits. with highlight pill + underline */}
+            <span style={{ display: 'inline-block', position: 'relative', marginTop: '0.1em' }}>
+              <motion.span
+                aria-hidden
+                initial={{ scaleX: 0, opacity: 0 }}
+                animate={{ scaleX: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
+                style={{ originX: 0 }}
+                className="absolute inset-0 -mx-3 rounded-xl bg-[#8B31C7]/10 -z-10"
+              />
+              <TextReveal
+                text="Profits."
+                delay={0.56}
+                wordClassName="text-[#8B31C7]"
+                onComplete={() => shimmerControls.start({
+                  x: ['-100%', '200%'],
+                  transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 },
+                })}
+              />
+              <motion.span
+                aria-hidden
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 0.55, delay: 1.15, ease: [0.22, 1, 0.36, 1] }}
+                style={{ originX: 0 }}
+                className="absolute -bottom-1 left-0 right-0 h-[3px] rounded-full bg-gradient-to-r from-[#8B31C7] via-[#C044E0] to-[#8B31C7]"
+              />
+            </span>
             {/* Shimmer sweep */}
             <motion.span
               aria-hidden
@@ -138,7 +172,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.75 }}
             className="mt-6 md:mt-8 text-[#8C857C] text-base md:text-lg leading-relaxed max-w-md"
           >
-            Creative branding, social media, packaging, UI/UX, and digital experiences crafted for modern businesses.
+            Business consulting, branding, social media, UI/UX, websites and digital experiences crafted for improving your business.
           </motion.p>
 
           <motion.div
@@ -165,7 +199,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="flex gap-8 md:gap-12 mt-10 md:mt-14 pt-8 md:pt-10 border-t border-[#8C857C]/15"
           >
-            {([{ to: 120, suffix: '+', label: 'Projects' }, { to: 50, suffix: '+', label: 'Clients' }, { to: 5, suffix: '★', label: 'Rating' }]).map(({ to, suffix, label }, i) => (
+            {([{ to: 120, suffix: '+', label: 'Projects' }, { to: 50, suffix: '+', label: 'Clients' }]).map(({ to, suffix, label }, i) => (
               <motion.div
                 key={label}
                 initial={{ opacity: 0, y: 16 }}
@@ -176,6 +210,16 @@ export default function Hero() {
                 <p className="text-[#8C857C] text-xs md:text-sm mt-1">{label}</p>
               </motion.div>
             ))}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.4 }}
+            >
+              <p className="text-2xl md:text-3xl font-black text-[#2E2A26]">
+                4.9<span className="text-lg md:text-xl align-middle">★</span>
+              </p>
+              <p className="text-[#8C857C] text-xs md:text-sm mt-1">Rating</p>
+            </motion.div>
           </motion.div>
         </div>
 

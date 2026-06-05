@@ -41,16 +41,31 @@ export default function ContactForm() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-6">
-              Get In Touch
-            </p>
-            <h2 className="text-5xl lg:text-6xl font-black leading-tight text-[#2E2A26] mb-8">
-              Let's Build Something{' '}
-              <span className="gradient-text">Great Together.</span>
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-[#8B31C7]/30 bg-[#8B31C7]/8">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#8B31C7] animate-pulse" />
+              <p className="uppercase tracking-[3px] text-[#8B31C7] text-[11px] font-bold">Get In Touch</p>
+            </div>
+
+            {/* Headline */}
+            <h2 className="text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight text-[#2E2A26] mb-6">
+              Your brand deserves{' '}
+              <br className="hidden md:block" />
+              to be{' '}
+              <span className="relative inline-block">
+                <span className="gradient-text">unforgettable.</span>
+                <span
+                  aria-hidden
+                  className="absolute -bottom-1 left-0 right-0 h-[3px] rounded-full bg-gradient-to-r from-[#8B31C7] via-[#C044E0] to-[#8B31C7] opacity-60"
+                />
+              </span>
+              <br />
+              <span className="text-[#8B31C7]">Let's</span> make it happen.
             </h2>
-            <p className="text-[#8C857C] text-lg leading-relaxed mb-12">
-              Ready to elevate your brand? Fill in the form and we'll get back to you
-              within 24 hours with a tailored plan for your project.
+
+            {/* Sub-copy */}
+            <p className="text-[#8C857C] text-lg leading-relaxed mb-10 max-w-sm">
+              Tell us about your business — we'll get back within <span className="font-semibold text-[#2E2A26]">24 hours</span> with a tailored growth plan.
             </p>
 
             <div className="space-y-6">

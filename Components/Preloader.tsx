@@ -43,9 +43,7 @@ export default function Preloader() {
             transition={{ duration: 0.5 }}
             className="mb-8"
           >
-            <span className="inline-flex items-center bg-[#F2EDE6] rounded-sm px-2 py-1">
-              <img src="/logo.png.jpeg" alt="Criador" className="h-10 w-auto" style={{ mixBlendMode: 'multiply' }} />
-            </span>
+            <img src="/criador_logo.png" alt="Criador" className="h-10 w-auto brightness-0 invert" />
           </motion.div>
 
           {/* Cycling word */}

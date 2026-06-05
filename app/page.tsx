@@ -16,8 +16,14 @@ import CustomCursor from '@/Components/CustomCursor'
 import Preloader from '@/Components/Preloader'
 import WhatsApp from '@/Components/WhatsApp'
 import ScrollProgress from '@/Components/ScrollProgress'
+import Blogs from '@/Components/Blogs'
+import { getLatestPosts } from '@/lib/wordpress'
 
-export default function Home() {
+export const revalidate = 60
+
+export default async function Home() {
+  const latestPosts = await getLatestPosts(3)
+
   return (
     <main className="bg-[#F2EDE6] text-[#2E2A26] overflow-hidden cursor-none">
       <ScrollProgress />
@@ -32,6 +38,7 @@ export default function Home() {
       <About />
       <Process />
       <Testimonials />
+      <Blogs posts={latestPosts} />
       <FAQ />
       <ContactForm />
       <CTA />

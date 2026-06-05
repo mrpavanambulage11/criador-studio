@@ -147,7 +147,7 @@ export default function About() {
             >
               <div className="flex items-center gap-4 mb-4">
                 <span className="inline-flex items-center bg-[#F2EDE6] rounded-sm px-2 py-1">
-                  <img src={bp('/logo.png.jpeg')} alt="Criador" className="h-6 w-auto" style={{ mixBlendMode: 'multiply' }} loading="lazy" />
+                  <img src={bp('/criador_logo.png')} alt="Criador" className="h-6 w-auto" style={{ mixBlendMode: 'multiply' }} loading="lazy" />
                 </span>
                 <span className="ml-auto text-xs text-green-700 border border-green-400/40 bg-green-50 rounded-full px-3 py-1 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse inline-block" />

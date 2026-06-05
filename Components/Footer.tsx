@@ -77,7 +77,7 @@ export default function Footer() {
           >
             <a href="/" className="inline-block">
               <span className="inline-flex items-center bg-[#F2EDE6] rounded-sm px-1">
-                <img src={bp('/logo.png.jpeg')} alt="Criador" className="h-7 w-auto" style={{ mixBlendMode: 'multiply' }} />
+                <img src={bp('/criador_logo.png')} alt="Criador" className="h-7 w-auto" style={{ mixBlendMode: 'multiply' }} />
               </span>
             </a>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs">
@@ -95,13 +95,13 @@ export default function Footer() {
                 +91 96324 98185
               </a>
               <a
-                href="https://maps.google.com/?q=65/1C,+Kaikondrahalli,+Sarjapur+Main+Road,+Bengaluru,+Karnataka+560035"
+                href="https://maps.google.com/?q=Haralur,+Bengaluru,+Karnataka,+India"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 text-sm text-white/50 hover:text-white transition-colors group"
               >
                 <svg className="w-4 h-4 text-[#8B31C7] shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>65/1C, below AirTel, Kaikondrahalli,<br />Sarjapur Main Road,<br />Bengaluru, Karnataka 560035</span>
+                <span>Haralur, Bengaluru,<br />Karnataka, India</span>
               </a>
             </div>
 
@@ -162,7 +162,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/25 text-sm">© 2021 Criador Creative Studio. All Rights Reserved.</p>
+          <p className="text-white/25 text-sm">© 2026 Criador PVT LTD. All Rights Reserved.</p>
 <div className="flex items-center gap-6">
             <a href="/privacy-policy" className="text-white/25 hover:text-white/60 text-sm transition-colors">Privacy Policy</a>
             <a href="/terms-of-service" className="text-white/25 hover:text-white/60 text-sm transition-colors">Terms of Service</a>

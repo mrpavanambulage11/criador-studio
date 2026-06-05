@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     siteName: 'Criador Creative Studio',
     title: 'Criador Creative Studio | Branding, Social Media & Web Design Agency',
     description: 'Premium creative agency for branding, social media, SEO, packaging, and web design. 120+ projects. 50+ happy clients.',
-    images: [{ url: '/logo.png.jpeg', width: 1200, height: 630, alt: 'Criador Creative Studio' }],
+    images: [{ url: '/criador_logo.png', width: 1200, height: 630, alt: 'Criador Creative Studio' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Criador Creative Studio | Branding & Web Design Agency',
     description: 'Premium creative agency for branding, social media, SEO, packaging, and web design.',
-    images: ['/logo.png.jpeg'],
+    images: ['/criador_logo.png'],
   },
   robots: {
     index: true,
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
   },
   icons: {
-    icon: '/logo.png.jpeg',
-    apple: '/logo.png.jpeg',
+    icon: '/criador_logo.png',
+    apple: '/criador_logo.png',
   },
 }
 
