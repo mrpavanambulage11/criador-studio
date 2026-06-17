@@ -201,7 +201,7 @@ export default function Services() {
   }
 
   return (
-    <section id="services" className="pt-6 pb-8 md:pt-8 md:pb-10 px-4 md:px-6">
+    <section id="services" className="pt-4 pb-4 md:pt-6 md:pb-6 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
 
         <motion.div

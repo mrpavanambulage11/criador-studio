@@ -128,7 +128,7 @@ export default function Portfolio() {
   const filtered = activeFilter === 'All' ? allWorks : allWorks.filter((w) => w.category === activeFilter)
 
   return (
-    <section id="portfolio" className="py-8 md:py-10 px-4 md:px-6">
+    <section id="portfolio" className="py-4 md:py-6 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -136,7 +136,7 @@ export default function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mb-10"
+          className="mb-5"
         >
           <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-5">Selected Work</p>
           <div className="flex items-end justify-between flex-wrap gap-8">
@@ -190,7 +190,7 @@ export default function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-8 md:mt-10 glass rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-[#8B31C7]/10"
+          className="mt-4 md:mt-6 glass rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-[#8B31C7]/10"
         >
           <div>
             <p className="text-xl font-black text-[#2E2A26]">Want results like these?</p>

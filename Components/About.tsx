@@ -72,7 +72,7 @@ const values = [
 
 export default function About() {
   return (
-    <section id="about" className="py-8 md:py-10 px-4 md:px-6" itemScope itemType="https://schema.org/Organization">
+    <section id="about" className="py-4 md:py-6 px-4 md:px-6" itemScope itemType="https://schema.org/Organization">
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -80,7 +80,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
-          className="mb-8 md:mb-12"
+          className="mb-4 md:mb-6"
         >
           <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-5">About Criador</p>
           <div className="flex items-end justify-between flex-wrap gap-6">

@@ -16,7 +16,7 @@ function CountUp({ to, suffix = '' }: { to: number; suffix?: string }) {
 
 export default function CTA() {
   return (
-    <section className="py-8 md:py-10 px-4 md:px-6">
+    <section className="py-4 md:py-6 px-4 md:px-6">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

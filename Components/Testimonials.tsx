@@ -69,7 +69,7 @@ export default function Testimonials() {
   const r = reviews[active]
 
   return (
-    <section id="testimonials" className="py-8 md:py-10 px-4 md:px-6 overflow-hidden">
+    <section id="testimonials" className="py-4 md:py-6 px-4 md:px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
 
         <motion.div
@@ -77,7 +77,7 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-6 md:mb-8"
+          className="text-center mb-4 md:mb-5"
         >
           <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-5">
             Social Proof
