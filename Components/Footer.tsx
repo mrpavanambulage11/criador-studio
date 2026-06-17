@@ -44,7 +44,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mb-12 md:mb-20 pb-10 md:pb-16 border-b border-white/8"
+          className="mb-8 md:mb-12 pb-8 md:pb-10 border-b border-white/8"
         >
           <p className="uppercase tracking-[4px] text-[#8B31C7] text-xs font-semibold mb-5">Let's Connect</p>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
@@ -65,7 +65,7 @@ export default function Footer() {
         </motion.div>
 
         {/* Main grid */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-12 mb-12 md:mb-20">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-12 mb-8 md:mb-12">
 
           {/* Brand column */}
           <motion.div

@@ -5,7 +5,7 @@ import { BlogPost } from '@/lib/wordpress'
 
 export default function Blogs({ posts }: { posts: BlogPost[] }) {
   return (
-    <section id="blogs" className="py-16 md:py-24 px-4 md:px-6">
+    <section id="blogs" className="py-10 md:py-14 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -39,7 +39,7 @@ export default function Blogs({ posts }: { posts: BlogPost[] }) {
             <p className="text-[#8C857C] text-lg font-medium">Blog posts coming soon!</p>
           </motion.div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className={`grid gap-6 ${posts.length === 1 ? 'grid-cols-1 md:grid-cols-2 max-w-2xl' : 'grid-cols-1 md:grid-cols-3'}`}>
             {posts.map((post, i) => (
               <motion.div
                 key={post.id}

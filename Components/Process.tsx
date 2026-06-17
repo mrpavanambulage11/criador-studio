@@ -6,9 +6,12 @@ const steps = [
     num: '01',
     title: 'Discovery',
     desc: 'Deep dive into your brand, goals, and target audience to understand what makes you different.',
+    bg: 'bg-[#8B31C7]',
+    iconBg: 'bg-[#8B31C7]',
     icon: (
-      <svg className="w-6 h-6 text-[#8B31C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+        <line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" />
       </svg>
     ),
   },
@@ -16,10 +19,12 @@ const steps = [
     num: '02',
     title: 'Research',
     desc: 'Competitive analysis and market positioning to find your unique space in the market.',
+    bg: 'bg-[#1D3461]',
+    iconBg: 'bg-[#1D3461]',
     icon: (
-      <svg className="w-6 h-6 text-[#8B31C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
-        <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+      <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" /><line x1="2" y1="20" x2="22" y2="20" />
       </svg>
     ),
   },
@@ -27,11 +32,12 @@ const steps = [
     num: '03',
     title: 'Strategy',
     desc: 'Creative direction, messaging framework, and a design blueprint tailored to your audience.',
+    bg: 'bg-[#1A4731]',
+    iconBg: 'bg-[#1A4731]',
     icon: (
-      <svg className="w-6 h-6 text-[#8B31C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/>
-        <line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/>
-        <line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/>
+      <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 20h20" /><path d="M7 20V10" /><path d="M12 20V4" /><path d="M17 20V14" />
+        <path d="M2 10l5-5 5 7 5-6 5 4" />
       </svg>
     ),
   },
@@ -39,9 +45,13 @@ const steps = [
     num: '04',
     title: 'Design',
     desc: 'Crafting every visual asset with precision — from logos to full digital systems.',
+    bg: 'bg-[#7B4F12]',
+    iconBg: 'bg-[#7B4F12]',
     icon: (
-      <svg className="w-6 h-6 text-[#8B31C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+      <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="13.5" cy="6.5" r="3.5" />
+        <path d="M10 10L3 17l1 3 3-1 7-7" />
+        <path d="M15 5l4 4" />
       </svg>
     ),
   },
@@ -49,11 +59,14 @@ const steps = [
     num: '05',
     title: 'Launch',
     desc: 'Delivery, implementation, and ongoing brand support so you hit the ground running.',
+    bg: 'bg-[#3D2B1F]',
+    iconBg: 'bg-[#3D2B1F]',
     icon: (
-      <svg className="w-6 h-6 text-[#8B31C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
-        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
-        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+      <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
       </svg>
     ),
   },
@@ -69,7 +82,7 @@ export default function Process() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mb-16 md:mb-24"
+          className="mb-8 md:mb-12"
         >
           <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-5">How We Work</p>
           <div className="flex items-end justify-between flex-wrap gap-6">
@@ -105,17 +118,17 @@ export default function Process() {
                 transition={{ delay: i * 0.1, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
                 className="group relative"
               >
-                <div className="glass rounded-3xl p-6 text-center h-full hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 border border-transparent hover:border-[#8B31C7]/20">
+                <div className="glass rounded-3xl p-5 h-full hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 border border-transparent hover:border-[#8B31C7]/20">
 
-                  {/* Number + icon */}
-                  <div className="relative inline-flex flex-col items-center mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-[#8B31C7]/10 border border-[#8B31C7]/20 flex items-center justify-center mb-2">
+                  {/* Icon + number row */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className={`w-12 h-12 rounded-2xl ${step.iconBg} flex items-center justify-center shrink-0 shadow-md`}>
                       {step.icon}
                     </div>
-                    <span className="text-xs font-black text-[#8B31C7]/50">{step.num}</span>
+                    <span className="text-2xl font-black text-[#8B31C7]/20">{step.num}</span>
                   </div>
 
-                  <h3 className="text-base font-black mb-3 text-[#2E2A26] tracking-tight">{step.title}</h3>
+                  <h3 className="text-base font-black mb-2 text-[#2E2A26] tracking-tight">{step.title}</h3>
                   <p className="text-[#8C857C] text-xs leading-relaxed">{step.desc}</p>
                 </div>
 

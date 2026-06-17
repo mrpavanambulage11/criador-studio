@@ -87,7 +87,7 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,#8B31C718,transparent)]" />
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-20 items-center relative z-10 w-full py-12 md:py-20">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-20 items-center relative z-10 w-full py-6 md:py-12">
 
         {/* Left */}
         <div>
@@ -172,7 +172,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.75 }}
             className="mt-6 md:mt-8 text-[#8C857C] text-base md:text-lg leading-relaxed max-w-md"
           >
-            Business consulting, branding, social media, UI/UX, websites and digital experiences crafted for improving your business.
+            Business consulting, branding, social media marketing, SEO, and digital experiences crafted for startups and businesses in Bengaluru and across India.
           </motion.p>
 
           <motion.div

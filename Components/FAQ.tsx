@@ -5,7 +5,11 @@ import { useState } from 'react'
 const faqs = [
   {
     q: 'What services does Criador offer?',
-    a: 'We offer branding, catalog design, visiting cards, label designing, social media marketing, SEO, web hosting, and e-commerce solutions — everything a modern business needs to build a strong brand presence.',
+    a: 'Criador offers business consulting, branding, catalog design, visiting cards, label designing, social media marketing, SEO, AIEO, GEO, web hosting, and e-commerce development — everything a modern business needs to build a strong brand presence and grow online.',
+  },
+  {
+    q: 'Where is Criador Creative Studio located?',
+    a: 'Criador Creative Studio is based in Haralur, Bengaluru, Karnataka, India. We serve clients across India and internationally via remote collaboration.',
   },
   {
     q: 'How long does a branding project take?',
@@ -17,15 +21,27 @@ const faqs = [
   },
   {
     q: 'Do you work with startups and small businesses?',
-    a: 'Absolutely. We work with businesses of all sizes — from early-stage startups building their first brand identity to established companies refreshing their presence for a new market.',
+    a: 'Absolutely. We work with businesses of all sizes — from early-stage startups building their first brand identity to established companies looking to refresh their presence for a new market.',
   },
   {
     q: 'How does the design process work?',
     a: 'We follow a 5-step process: Discovery, Research, Strategy, Design, and Launch. Every project kicks off with a free 30-minute strategy call to align on vision before any design work begins.',
   },
   {
+    q: 'Does Criador offer SEO, AIEO, and GEO services?',
+    a: 'Yes. We provide traditional SEO (Search Engine Optimization), AIEO (AI Engine Optimization for tools like ChatGPT and Gemini), and GEO (Generative Engine Optimization for AI-generated search results) — ensuring your brand is discoverable across all modern search surfaces.',
+  },
+  {
+    q: 'How can I contact Criador Creative Studio?',
+    a: 'You can reach us at hello@criador.studio, call or WhatsApp us at +91 96324 98185, or use the contact form on this page. We aim to get back to you the same business day.',
+  },
+  {
     q: 'Do you offer revisions?',
     a: 'Yes. Every project includes structured revision rounds. We work collaboratively to make sure the final result exceeds your expectations before we close out a project.',
+  },
+  {
+    q: 'Can Criador handle both design and digital marketing for my brand?',
+    a: 'Yes — that\'s exactly what sets us apart. We offer end-to-end brand building under one roof: from logo design and brand identity to social media marketing, SEO, and e-commerce. You get a consistent brand voice and look across every touchpoint without juggling multiple agencies.',
   },
 ]
 
@@ -33,7 +49,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="py-12 md:py-16 px-4 md:px-6">
+    <section id="faq" className="py-12 md:py-16 px-4 md:px-6" itemScope itemType="https://schema.org/FAQPage">
       <div className="max-w-4xl mx-auto">
 
         <motion.div
@@ -63,6 +79,7 @@ export default function FAQ() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.07, duration: 0.5 }}
               className="glass rounded-2xl overflow-hidden"
+              itemScope itemType="https://schema.org/Question"
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
@@ -72,7 +89,7 @@ export default function FAQ() {
                   <span className={`text-xs font-black mt-0.5 shrink-0 transition-colors duration-200 ${open === i ? 'text-[#8B31C7]' : 'text-[#8C857C]/40'}`}>
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <span className="font-semibold text-[#2E2A26] text-base">{faq.q}</span>
+                  <span className="font-semibold text-[#2E2A26] text-base" itemProp="name">{faq.q}</span>
                 </span>
                 <span
                   className={`shrink-0 w-7 h-7 rounded-full border border-[#8C857C]/30 flex items-center justify-center text-[#8C857C] transition-all duration-300 ${
@@ -95,9 +112,11 @@ export default function FAQ() {
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
-                    <p className="px-8 pb-7 text-[#8C857C] leading-relaxed text-sm">
+                    <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                    <p className="px-8 pb-7 text-[#8C857C] leading-relaxed text-sm" itemProp="text">
                       {faq.a}
                     </p>
+                  </div>
                   </motion.div>
                 )}
               </AnimatePresence>
