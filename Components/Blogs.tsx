@@ -5,7 +5,7 @@ import { BlogPost } from '@/lib/wordpress'
 
 export default function Blogs({ posts }: { posts: BlogPost[] }) {
   return (
-    <section id="blogs" className="py-4 md:py-6 px-4 md:px-6">
+    <section id="blogs" className="pt-2 pb-4 md:pt-3 md:pb-6 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
 
         <motion.div

@@ -69,7 +69,7 @@ export default function Testimonials() {
   const r = reviews[active]
 
   return (
-    <section id="testimonials" className="py-4 md:py-6 px-4 md:px-6 overflow-hidden">
+    <section id="testimonials" className="pt-4 pb-2 md:pt-6 md:pb-3 px-4 md:px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
 
         <motion.div
