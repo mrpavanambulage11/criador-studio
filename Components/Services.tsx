@@ -64,7 +64,7 @@ const services: {
     title: 'Branding',
     desc: 'Logos, visual identities, brand positioning to make your business unforgettable.',
     gradient: 'from-[#8B31C7] to-[#6B2490]',
-    image: 'https://images.pexels.com/photos/6224/hands-people-woman-working.jpg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+    image: bp('/services/branding.jpg.png'),
     iconBg: 'bg-white/15',
     icon: (
       <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
@@ -91,7 +91,7 @@ const services: {
     title: 'Visiting Cards',
     desc: 'Premium business card designs that leave a lasting impression at every handshake.',
     gradient: 'from-[#3D2B1F] to-[#5C3D2E]',
-    image: 'https://images.pexels.com/photos/4050302/pexels-photo-4050302.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+    image: bp('/services/cards.jpg'),
     iconBg: 'bg-white/15',
     icon: (
       <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
@@ -147,7 +147,7 @@ const services: {
     title: 'Web Hosting',
     desc: 'Fast, secure, and reliable hosting solutions to keep your website always online.',
     gradient: 'from-[#1C3A5E] to-[#2A5298]',
-    image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+    image: bp('/services/web.jpg'),
     iconBg: 'bg-white/15',
     icon: (
       <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
@@ -164,7 +164,7 @@ const services: {
     title: 'E-Commerce',
     desc: 'End-to-end online store design and development built to convert visitors into customers.',
     gradient: 'from-[#4A1942] to-[#7B2D73]',
-    image: 'https://images.pexels.com/photos/5632393/pexels-photo-5632393.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+    image: bp('/services/ecom.jpg'),
     iconBg: 'bg-white/15',
     icon: (
       <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
