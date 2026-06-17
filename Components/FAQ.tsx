@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: 'How can I contact Criador Creative Studio?',
-    a: 'You can reach us at hello@criador.studio, call or WhatsApp us at +91 96324 98185, or use the contact form on this page. We aim to get back to you the same business day.',
+    a: 'Reach out to us via email, phone, WhatsApp, or the contact form below. Our team generally responds within one business day.',
   },
   {
     q: 'Do you offer revisions?',
