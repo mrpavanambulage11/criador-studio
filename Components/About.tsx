@@ -72,7 +72,7 @@ const values = [
 
 export default function About() {
   return (
-    <section id="about" className="py-12 md:py-16 px-4 md:px-6" itemScope itemType="https://schema.org/Organization">
+    <section id="about" className="py-8 md:py-10 px-4 md:px-6" itemScope itemType="https://schema.org/Organization">
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -103,7 +103,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.7 }}
-              className="text-[#2E2A26] text-lg md:text-xl leading-relaxed mb-12"
+              className="text-[#2E2A26] text-lg md:text-xl leading-relaxed mb-6"
             >
               <span itemProp="name" className="sr-only">Criador Creative Studio</span>
               <span itemProp="description">

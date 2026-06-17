@@ -13,7 +13,7 @@ export default function Blogs({ posts }: { posts: BlogPost[] }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="flex items-end justify-between flex-wrap gap-6 mb-12"
+          className="flex items-end justify-between flex-wrap gap-6 mb-6"
         >
           <div>
             <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-3">From The Blog</p>

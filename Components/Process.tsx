@@ -74,7 +74,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-12 md:py-16 px-4 md:px-6">
+    <section id="process" className="py-8 md:py-10 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -149,7 +149,7 @@ export default function Process() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="mt-12 md:mt-16 glass rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4 border border-[#8B31C7]/10"
+          className="mt-8 md:mt-10 glass rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4 border border-[#8B31C7]/10"
         >
           <div className="flex items-center gap-4">
             <span className="text-2xl">⏱️</span>

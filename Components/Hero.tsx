@@ -197,7 +197,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="flex gap-8 md:gap-12 mt-10 md:mt-14 pt-8 md:pt-10 border-t border-[#8C857C]/15"
+            className="flex gap-8 md:gap-12 mt-6 md:mt-8 pt-4 md:pt-6 border-t border-[#8C857C]/15"
           >
             {([{ to: 120, suffix: '+', label: 'Projects' }, { to: 50, suffix: '+', label: 'Clients' }]).map(({ to, suffix, label }, i) => (
               <motion.div

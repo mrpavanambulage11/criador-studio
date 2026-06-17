@@ -6,7 +6,7 @@ import { bp } from '@/lib/bp'
 type Work = { category: string; title: string; year: string; wide: boolean; image: string; tag: string; color: string }
 
 const row1: Work[] = [
-  { category: 'Branding', title: 'Luxe Studio', year: '2026', wide: false, image: bp('/portfolio/luxe.jpg'), tag: '🏆 Best of 2026', color: '#8B31C7' },
+  { category: 'Branding', title: 'Luxe Studio', year: '2026', wide: false, image: 'https://images.pexels.com/photos/6444/pencil-typography-black-design.jpg?w=800&h=600&fit=crop', tag: '🏆 Best of 2026', color: '#8B31C7' },
   { category: 'UI/UX Design', title: 'Fintech App', year: '2025', wide: false, image: bp('/portfolio/fintech.jpg'), tag: '📱 App Design', color: '#2952A3' },
 ]
 
@@ -128,7 +128,7 @@ export default function Portfolio() {
   const filtered = activeFilter === 'All' ? allWorks : allWorks.filter((w) => w.category === activeFilter)
 
   return (
-    <section id="portfolio" className="py-12 md:py-16 px-4 md:px-6">
+    <section id="portfolio" className="py-8 md:py-10 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -190,7 +190,7 @@ export default function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 md:mt-16 glass rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-[#8B31C7]/10"
+          className="mt-8 md:mt-10 glass rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-[#8B31C7]/10"
         >
           <div>
             <p className="text-xl font-black text-[#2E2A26]">Want results like these?</p>
