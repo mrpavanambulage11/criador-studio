@@ -61,7 +61,7 @@ export default function Clients() {
             {[...allClients, ...allClients].map((client, i) => (
               <div
                 key={i}
-                className="flex items-center justify-center w-36 h-20 rounded-2xl glass border border-transparent hover:border-[#8B31C7]/25 transition-colors duration-200 px-4 shrink-0"
+                className="flex items-center justify-center w-36 h-20 px-4 shrink-0"
               >
                 <img
                   src={bp(`/clients/${client.file}`)}

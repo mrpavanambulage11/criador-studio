@@ -76,5 +76,3 @@ img {
 }
 .marquee         { animation: marquee 35s linear infinite; }
 .marquee-reverse { animation: marquee-reverse 35s linear infinite; }
-.marquee-wrap:hover .marquee,
-.marquee-wrap:hover .marquee-reverse { animation-play-state: paused; }
