@@ -368,7 +368,11 @@ export default function Services() {
   }
 
   return (
+<<<<<<< HEAD
+    <section id="services" className="pt-4 pb-2 md:pt-6 md:pb-4 px-4 md:px-6">
+=======
     <section id="services" className="pt-4 pb-4 md:pt-6 md:pb-6 px-4 md:px-6">
+>>>>>>> 183d0d0d4d905091a7bf0fe4f81f86d68392317f
       <div className="max-w-7xl mx-auto">
 
         <motion.div
