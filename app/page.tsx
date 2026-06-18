@@ -141,7 +141,7 @@ const jsonLd = {
         {
           '@type': 'Question',
           name: 'What is the contact number for Criador Creative Studio?',
-          acceptedAnswer: { '@type': 'Answer', text: 'You can reach us at hello@criador.studio, call or WhatsApp us at +91 96324 98185, or use the contact form on our website. We aim to get back to you the same business day.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Reach out to us via email, phone, WhatsApp, or the contact form below. Our team generally responds within one business day.' },
         },
       ],
     },

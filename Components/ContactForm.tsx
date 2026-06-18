@@ -31,7 +31,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="py-12 md:py-16 px-4 md:px-6">
+    <section id="contact" className="py-4 md:py-6 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
@@ -49,18 +49,12 @@ export default function ContactForm() {
 
             {/* Headline */}
             <h2 className="text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight text-[#2E2A26] mb-6">
-              Your brand deserves{' '}
+              Your <span className="text-[#8B31C7]">brand</span> deserves{' '}
               <br className="hidden md:block" />
               to be{' '}
-              <span className="relative inline-block">
-                <span className="gradient-text">unforgettable.</span>
-                <span
-                  aria-hidden
-                  className="absolute -bottom-1 left-0 right-0 h-[3px] rounded-full bg-gradient-to-r from-[#8B31C7] via-[#C044E0] to-[#8B31C7] opacity-60"
-                />
-              </span>
+              <span className="text-[#8B31C7]">unforgettable.</span>
               <br />
-              <span className="text-[#8B31C7]">Let's</span> make it happen.
+              Let's make it happen.
             </h2>
 
             {/* Sub-copy */}
@@ -79,7 +73,7 @@ export default function ContactForm() {
                   icon: <><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></>,
                 },
                 {
-                  label: 'LinkedIn', value: 'linkedin.com/company/criador', href: 'https://linkedin.com',
+                  label: 'LinkedIn', value: 'linkedin.com/company/criador', href: 'https://www.linkedin.com/company/criador',
                   icon: <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></>,
                 },
               ].map(({ label, value, href, icon }) => (
@@ -159,7 +153,7 @@ export default function ContactForm() {
                       <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                         <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
                       </svg>
-                      Preparing WhatsApp...
+                      Sending...
                     </>
                   ) : 'Send Message →'}
                 </motion.button>

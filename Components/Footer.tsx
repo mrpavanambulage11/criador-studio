@@ -30,7 +30,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1E1B18] pt-16 md:pt-24 pb-10 px-4 md:px-6 relative overflow-hidden">
+    <footer className="bg-[#1E1B18] pt-8 md:pt-12 pb-8 px-4 md:px-6 relative overflow-hidden">
 
       {/* Background texture orbs */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-[#8B31C7]/6 blur-[120px] pointer-events-none" />

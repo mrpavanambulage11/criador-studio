@@ -69,7 +69,7 @@ export default function Testimonials() {
   const r = reviews[active]
 
   return (
-    <section id="testimonials" className="py-12 md:py-16 px-4 md:px-6 overflow-hidden">
+    <section id="testimonials" className="pt-4 pb-2 md:pt-6 md:pb-3 px-4 md:px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
 
         <motion.div
@@ -77,7 +77,7 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 md:mb-20"
+          className="text-center mb-4 md:mb-5"
         >
           <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-5">
             Social Proof
@@ -102,7 +102,7 @@ export default function Testimonials() {
 
           <div className="relative z-10">
             {/* Stars */}
-            <div className="flex justify-center gap-1 mb-10">
+            <div className="flex justify-center gap-1 mb-5">
               {[...Array(5)].map((_, i) => (
                 <span key={i} className="text-[#8B31C7] text-base">★</span>
               ))}
@@ -115,7 +115,7 @@ export default function Testimonials() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -16 }}
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-                className="text-xl lg:text-2xl text-[#2E2A26] leading-relaxed mb-10 max-w-4xl mx-auto text-center font-medium"
+                className="text-xl lg:text-2xl text-[#2E2A26] leading-relaxed mb-5 max-w-4xl mx-auto text-center font-medium"
               >
                 &ldquo;{r.quote}&rdquo;
               </motion.p>
@@ -141,7 +141,7 @@ export default function Testimonials() {
             </AnimatePresence>
 
             {/* Dot nav + progress */}
-            <div className="flex justify-center gap-2 mt-10">
+            <div className="flex justify-center gap-2 mt-5">
               {reviews.map((_, i) => (
                 <button
                   key={i}

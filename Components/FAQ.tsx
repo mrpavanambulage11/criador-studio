@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: 'How can I contact Criador Creative Studio?',
-    a: 'You can reach us at hello@criador.studio, call or WhatsApp us at +91 96324 98185, or use the contact form on this page. We aim to get back to you the same business day.',
+    a: 'Reach out to us via email, phone, WhatsApp, or the contact form below. Our team generally responds within one business day.',
   },
   {
     q: 'Do you offer revisions?',
@@ -49,7 +49,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="py-12 md:py-16 px-4 md:px-6" itemScope itemType="https://schema.org/FAQPage">
+    <section id="faq" className="py-4 md:py-6 px-4 md:px-6" itemScope itemType="https://schema.org/FAQPage">
       <div className="max-w-4xl mx-auto">
 
         <motion.div
@@ -57,7 +57,7 @@ export default function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          className="text-center mb-4"
         >
           <p className="uppercase tracking-[4px] text-[#8B31C7] text-sm font-medium mb-4">
             Common Questions
