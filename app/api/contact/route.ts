@@ -8,8 +8,8 @@ export async function POST(req: Request) {
     const { name, email, phone, message } = await req.json()
 
     await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>',
-      to: 'info@malgudiarts.com',
+      from: 'Criador Website <onboarding@resend.dev>',
+      to: 'info@criador.co.uk',
       subject: `New Enquiry from ${name}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #f9f9f9; border-radius: 12px;">
